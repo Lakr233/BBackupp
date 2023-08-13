@@ -1,0 +1,3 @@
+[submodule "Foundation/AppleMobileDevice"]
+	path = Foundation/AppleMobileDevice
+	url = https://github.com/Lakr233/AppleMobileDevice

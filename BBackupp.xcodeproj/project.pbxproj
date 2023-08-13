@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5005A4812A8BACB900F4C351 /* CryptoKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005A4802A8BACB900F4C351 /* CryptoKit.swift */; };
+		5005A4842A8BAE5C00F4C351 /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 5005A4832A8BAE5C00F4C351 /* ZipArchive */; };
+		5005A4862A8BDAE100F4C351 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005A4852A8BDAE100F4C351 /* Date.swift */; };
+		5031D1C52A864A890089B44F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1C42A864A890089B44F /* Configuration.swift */; };
+		5031D1C72A864EAA0089B44F /* DeviceConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1C62A864EAA0089B44F /* DeviceConfigurationView.swift */; };
+		5031D1C92A8650020089B44F /* UnpairedDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1C82A8650020089B44F /* UnpairedDeviceView.swift */; };
+		5031D1CD2A8679080089B44F /* PairInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1CC2A8679080089B44F /* PairInstructionView.swift */; };
+		5031D1CF2A86796E0089B44F /* UITemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1CE2A86796E0089B44F /* UITemplate.swift */; };
+		50411FD82A8D0D03009D5CED /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 50411FD72A8D0D03009D5CED /* License.txt */; };
+		504558422A868DB9006A450C /* DeviceInfoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504558412A868DB9006A450C /* DeviceInfoSheet.swift */; };
+		504558442A869452006A450C /* BackupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504558432A869452006A450C /* BackupListView.swift */; };
+		504558462A869458006A450C /* BackupProgressListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504558452A869458006A450C /* BackupProgressListView.swift */; };
+		50680FF32A8548E800367607 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50680FF22A8548E800367607 /* WelcomeView.swift */; };
+		50680FF52A854A5A00367607 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50680FF42A854A5A00367607 /* SidebarView.swift */; };
+		50680FFA2A85537C00367607 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50680FF92A85537C00367607 /* DeviceManager.swift */; };
+		50680FFD2A85540800367607 /* PublishedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50680FFC2A85540800367607 /* PublishedStorage.swift */; };
+		50680FFF2A8555FA00367607 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50680FFE2A8555FA00367607 /* Device.swift */; };
+		506810032A85732200367607 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506810022A85732200367607 /* SettingView.swift */; };
+		50AC93012A84DC95004E99BA /* BBackuppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC93002A84DC95004E99BA /* BBackuppApp.swift */; };
+		50AC93032A84DC95004E99BA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC93022A84DC95004E99BA /* MainView.swift */; };
+		50AC93052A84DC97004E99BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AC93042A84DC97004E99BA /* Assets.xcassets */; };
+		50AC93132A84DD35004E99BA /* AppleMobileDevice in Frameworks */ = {isa = PBXBuildFile; productRef = 50AC93122A84DD35004E99BA /* AppleMobileDevice */; };
+		50FF935D2A87E6880031843C /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF935C2A87E6880031843C /* NSImage.swift */; };
+		50FF93612A87F52A0031843C /* BackupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93602A87F52A0031843C /* BackupManager.swift */; };
+		50FF93632A87F69C0031843C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93622A87F69C0031843C /* AppDelegate.swift */; };
+		50FF93662A87F8970031843C /* StatusBarPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93652A87F8970031843C /* StatusBarPopoverView.swift */; };
+		50FF93682A87F8D80031843C /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93672A87F8D80031843C /* EventMonitor.swift */; };
+		50FF936A2A88C3C40031843C /* WiredToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93692A88C3C40031843C /* WiredToggleView.swift */; };
+		50FF936C2A88C90E0031843C /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF936B2A88C90E0031843C /* FileManager.swift */; };
+		50FF936E2A88D6F70031843C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF936D2A88D6F70031843C /* String.swift */; };
+		50FF93702A88F5A00031843C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF936F2A88F5A00031843C /* Result.swift */; };
+		50FF93722A88F8C50031843C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93712A88F8C50031843C /* Constants.swift */; };
+		50FF93742A88FD280031843C /* NotificationSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93732A88FD280031843C /* NotificationSetupView.swift */; };
+		50FF93762A89078F0031843C /* BackupSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93752A89078F0031843C /* BackupSession.swift */; };
+		50FF93782A890CF90031843C /* Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93772A890CF90031843C /* Backup.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5005A4802A8BACB900F4C351 /* CryptoKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoKit.swift; sourceTree = "<group>"; };
+		5005A4852A8BDAE100F4C351 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		5031D1C42A864A890089B44F /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		5031D1C62A864EAA0089B44F /* DeviceConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConfigurationView.swift; sourceTree = "<group>"; };
+		5031D1C82A8650020089B44F /* UnpairedDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnpairedDeviceView.swift; sourceTree = "<group>"; };
+		5031D1CC2A8679080089B44F /* PairInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairInstructionView.swift; sourceTree = "<group>"; };
+		5031D1CE2A86796E0089B44F /* UITemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITemplate.swift; sourceTree = "<group>"; };
+		50411FD72A8D0D03009D5CED /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		504558412A868DB9006A450C /* DeviceInfoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoSheet.swift; sourceTree = "<group>"; };
+		504558432A869452006A450C /* BackupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupListView.swift; sourceTree = "<group>"; };
+		504558452A869458006A450C /* BackupProgressListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupProgressListView.swift; sourceTree = "<group>"; };
+		50680FF22A8548E800367607 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		50680FF42A854A5A00367607 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		50680FF92A85537C00367607 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		50680FFC2A85540800367607 /* PublishedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishedStorage.swift; sourceTree = "<group>"; };
+		50680FFE2A8555FA00367607 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		506810022A85732200367607 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		50AC92FD2A84DC95004E99BA /* BBackupp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBackupp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50AC93002A84DC95004E99BA /* BBackuppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBackuppApp.swift; sourceTree = "<group>"; };
+		50AC93022A84DC95004E99BA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		50AC93042A84DC97004E99BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50AC93092A84DC97004E99BA /* BBackupp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BBackupp.entitlements; sourceTree = "<group>"; };
+		50FF935C2A87E6880031843C /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
+		50FF93602A87F52A0031843C /* BackupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupManager.swift; sourceTree = "<group>"; };
+		50FF93622A87F69C0031843C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50FF93642A87F8400031843C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		50FF93652A87F8970031843C /* StatusBarPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarPopoverView.swift; sourceTree = "<group>"; };
+		50FF93672A87F8D80031843C /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		50FF93692A88C3C40031843C /* WiredToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiredToggleView.swift; sourceTree = "<group>"; };
+		50FF936B2A88C90E0031843C /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		50FF936D2A88D6F70031843C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		50FF936F2A88F5A00031843C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		50FF93712A88F8C50031843C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		50FF93732A88FD280031843C /* NotificationSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetupView.swift; sourceTree = "<group>"; };
+		50FF93752A89078F0031843C /* BackupSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupSession.swift; sourceTree = "<group>"; };
+		50FF93772A890CF90031843C /* Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backup.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50AC92FA2A84DC95004E99BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50AC93132A84DD35004E99BA /* AppleMobileDevice in Frameworks */,
+				5005A4842A8BAE5C00F4C351 /* ZipArchive in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50680FEF2A85451300367607 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				50AC93002A84DC95004E99BA /* BBackuppApp.swift */,
+				50FF93622A87F69C0031843C /* AppDelegate.swift */,
+				50FF93712A88F8C50031843C /* Constants.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		50680FF02A85451900367607 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				50AC93022A84DC95004E99BA /* MainView.swift */,
+				50680FF22A8548E800367607 /* WelcomeView.swift */,
+				50680FF42A854A5A00367607 /* SidebarView.swift */,
+				5031D1C62A864EAA0089B44F /* DeviceConfigurationView.swift */,
+				50FF93732A88FD280031843C /* NotificationSetupView.swift */,
+				5031D1CC2A8679080089B44F /* PairInstructionView.swift */,
+				5031D1C82A8650020089B44F /* UnpairedDeviceView.swift */,
+				504558412A868DB9006A450C /* DeviceInfoSheet.swift */,
+				506810022A85732200367607 /* SettingView.swift */,
+				504558432A869452006A450C /* BackupListView.swift */,
+				504558452A869458006A450C /* BackupProgressListView.swift */,
+				50FF93652A87F8970031843C /* StatusBarPopoverView.swift */,
+				50FF93692A88C3C40031843C /* WiredToggleView.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		50680FF12A85451E00367607 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50AC93042A84DC97004E99BA /* Assets.xcassets */,
+				50411FD72A8D0D03009D5CED /* License.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		50680FF82A85536800367607 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				5031D1C42A864A890089B44F /* Configuration.swift */,
+				50680FFE2A8555FA00367607 /* Device.swift */,
+				50680FF92A85537C00367607 /* DeviceManager.swift */,
+				50FF93772A890CF90031843C /* Backup.swift */,
+				50FF93752A89078F0031843C /* BackupSession.swift */,
+				50FF93602A87F52A0031843C /* BackupManager.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		50680FFB2A8553F700367607 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				50680FFC2A85540800367607 /* PublishedStorage.swift */,
+				5005A4852A8BDAE100F4C351 /* Date.swift */,
+				5031D1CE2A86796E0089B44F /* UITemplate.swift */,
+				50FF936B2A88C90E0031843C /* FileManager.swift */,
+				50FF935C2A87E6880031843C /* NSImage.swift */,
+				50FF936D2A88D6F70031843C /* String.swift */,
+				50FF936F2A88F5A00031843C /* Result.swift */,
+				50FF93672A87F8D80031843C /* EventMonitor.swift */,
+				5005A4802A8BACB900F4C351 /* CryptoKit.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		50AC92F42A84DC95004E99BA = {
+			isa = PBXGroup;
+			children = (
+				50AC92FF2A84DC95004E99BA /* BBackupp */,
+				50AC92FE2A84DC95004E99BA /* Products */,
+				50AC930F2A84DCD8004E99BA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		50AC92FE2A84DC95004E99BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50AC92FD2A84DC95004E99BA /* BBackupp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50AC92FF2A84DC95004E99BA /* BBackupp */ = {
+			isa = PBXGroup;
+			children = (
+				50FF93642A87F8400031843C /* Info.plist */,
+				50AC93092A84DC97004E99BA /* BBackupp.entitlements */,
+				50680FEF2A85451300367607 /* Application */,
+				50680FF02A85451900367607 /* Interface */,
+				50680FF82A85536800367607 /* Backend */,
+				50680FFB2A8553F700367607 /* Extension */,
+				50680FF12A85451E00367607 /* Resources */,
+			);
+			path = BBackupp;
+			sourceTree = "<group>";
+		};
+		50AC930F2A84DCD8004E99BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50AC92FC2A84DC95004E99BA /* BBackupp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50AC930C2A84DC97004E99BA /* Build configuration list for PBXNativeTarget "BBackupp" */;
+			buildPhases = (
+				50AC92F92A84DC95004E99BA /* Sources */,
+				50AC92FA2A84DC95004E99BA /* Frameworks */,
+				50AC92FB2A84DC95004E99BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBackupp;
+			packageProductDependencies = (
+				50AC93122A84DD35004E99BA /* AppleMobileDevice */,
+				5005A4832A8BAE5C00F4C351 /* ZipArchive */,
+			);
+			productName = BBackupp;
+			productReference = 50AC92FD2A84DC95004E99BA /* BBackupp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50AC92F52A84DC95004E99BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					50AC92FC2A84DC95004E99BA = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 50AC92F82A84DC95004E99BA /* Build configuration list for PBXProject "BBackupp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50AC92F42A84DC95004E99BA;
+			packageReferences = (
+				5005A4822A8BAE5C00F4C351 /* XCRemoteSwiftPackageReference "ZipArchive" */,
+			);
+			productRefGroup = 50AC92FE2A84DC95004E99BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50AC92FC2A84DC95004E99BA /* BBackupp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50AC92FB2A84DC95004E99BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50AC93052A84DC97004E99BA /* Assets.xcassets in Resources */,
+				50411FD82A8D0D03009D5CED /* License.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50AC92F92A84DC95004E99BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50FF93702A88F5A00031843C /* Result.swift in Sources */,
+				5031D1C92A8650020089B44F /* UnpairedDeviceView.swift in Sources */,
+				50AC93032A84DC95004E99BA /* MainView.swift in Sources */,
+				5031D1CF2A86796E0089B44F /* UITemplate.swift in Sources */,
+				50FF93762A89078F0031843C /* BackupSession.swift in Sources */,
+				50FF93612A87F52A0031843C /* BackupManager.swift in Sources */,
+				5031D1C72A864EAA0089B44F /* DeviceConfigurationView.swift in Sources */,
+				5031D1CD2A8679080089B44F /* PairInstructionView.swift in Sources */,
+				504558422A868DB9006A450C /* DeviceInfoSheet.swift in Sources */,
+				506810032A85732200367607 /* SettingView.swift in Sources */,
+				50FF93742A88FD280031843C /* NotificationSetupView.swift in Sources */,
+				504558442A869452006A450C /* BackupListView.swift in Sources */,
+				50FF936A2A88C3C40031843C /* WiredToggleView.swift in Sources */,
+				50FF93722A88F8C50031843C /* Constants.swift in Sources */,
+				50FF936C2A88C90E0031843C /* FileManager.swift in Sources */,
+				50680FF52A854A5A00367607 /* SidebarView.swift in Sources */,
+				50FF93782A890CF90031843C /* Backup.swift in Sources */,
+				50680FF32A8548E800367607 /* WelcomeView.swift in Sources */,
+				50FF936E2A88D6F70031843C /* String.swift in Sources */,
+				504558462A869458006A450C /* BackupProgressListView.swift in Sources */,
+				5005A4812A8BACB900F4C351 /* CryptoKit.swift in Sources */,
+				50680FFD2A85540800367607 /* PublishedStorage.swift in Sources */,
+				50680FFF2A8555FA00367607 /* Device.swift in Sources */,
+				50AC93012A84DC95004E99BA /* BBackuppApp.swift in Sources */,
+				50680FFA2A85537C00367607 /* DeviceManager.swift in Sources */,
+				50FF93632A87F69C0031843C /* AppDelegate.swift in Sources */,
+				50FF935D2A87E6880031843C /* NSImage.swift in Sources */,
+				5005A4862A8BDAE100F4C351 /* Date.swift in Sources */,
+				5031D1C52A864A890089B44F /* Configuration.swift in Sources */,
+				50FF93662A87F8970031843C /* StatusBarPopoverView.swift in Sources */,
+				50FF93682A87F8D80031843C /* EventMonitor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		50AC930A2A84DC97004E99BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		50AC930B2A84DC97004E99BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		50AC930D2A84DC97004E99BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BBackupp/BBackupp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 6;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 6CMYQQFFT8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BBackupp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BBackupp;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.BBackupp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		50AC930E2A84DC97004E99BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BBackupp/BBackupp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 6;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 6CMYQQFFT8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BBackupp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BBackupp;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.BBackupp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50AC92F82A84DC95004E99BA /* Build configuration list for PBXProject "BBackupp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50AC930A2A84DC97004E99BA /* Debug */,
+				50AC930B2A84DC97004E99BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50AC930C2A84DC97004E99BA /* Build configuration list for PBXNativeTarget "BBackupp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50AC930D2A84DC97004E99BA /* Debug */,
+				50AC930E2A84DC97004E99BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5005A4822A8BAE5C00F4C351 /* XCRemoteSwiftPackageReference "ZipArchive" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZipArchive/ZipArchive";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5005A4832A8BAE5C00F4C351 /* ZipArchive */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5005A4822A8BAE5C00F4C351 /* XCRemoteSwiftPackageReference "ZipArchive" */;
+			productName = ZipArchive;
+		};
+		50AC93122A84DD35004E99BA /* AppleMobileDevice */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppleMobileDevice;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 50AC92F52A84DC95004E99BA /* Project object */;
+}

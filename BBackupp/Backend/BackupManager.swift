@@ -157,38 +157,42 @@ class BackupManager: NSObject, ObservableObject {
             })
         }
         for device in deviceManager.devices {
-            guard !runningBackups.map(\.device.udid).contains(device.udid) else {
-                NSLog("skip \(device.deviceName) \(device.udid) because another backup is running")
-                continue
-            }
+            backupCheckStart(forDevice: device)
+        }
+    }
 
-            let check = device.config.needsBackup(udid: device.universalDeviceIdentifier)
-            switch check {
-            case let .failure(error):
-                NSLog("skip \(device.deviceName) \(device.udid) because \(error)")
-                continue
-            default: break
-            }
+    private func backupCheckStart(forDevice device: Device) {
+        guard !runningBackups.map(\.device.udid).contains(device.udid) else {
+            NSLog("skip \(device.deviceName) \(device.udid) because another backup is running")
+            return
+        }
 
-            // now the config tells us it is ok to backup
-            // but we need to check if there is already an attempt in a somehow short-term
-            // for now let's just say whith in 18 hours
-            // TODO: A Better Algorithem
+        let check = device.config.needsBackup(udid: device.universalDeviceIdentifier)
+        switch check {
+        case let .failure(error):
+            NSLog("skip \(device.deviceName) \(device.udid) because \(error)")
+            return
+        default: break
+        }
 
-            let lastAttempt = lastBackupAttempt[
-                device.universalDeviceIdentifier,
-                default: Date(timeIntervalSince1970: 0)
-            ]
-            guard Date().timeIntervalSince(lastAttempt) > 18 * 3600 else {
-                NSLog("skip \(device.deviceName) \(device.udid) because last attempt too close")
-                return
-            }
+        // now the config tells us it is ok to backup
+        // but we need to check if there is already an attempt in a somehow short-term
+        // for now let's just say whith in 18 hours
+        // TODO: A Better Algorithem
 
-            NSLog("\(device.deviceName) \(device.udid) will start backup")
-            DispatchQueue.main.async {
-                self.lastBackupAttempt[device.universalDeviceIdentifier] = Date()
-                self.startBackupSession(forDevice: device, fullBackupMode: false)
-            }
+        let lastAttempt = lastBackupAttempt[
+            device.universalDeviceIdentifier,
+            default: Date(timeIntervalSince1970: 0)
+        ]
+        guard Date().timeIntervalSince(lastAttempt) > 18 * 3600 else {
+            NSLog("skip \(device.deviceName) \(device.udid) because last attempt too close")
+            return
+        }
+
+        NSLog("\(device.deviceName) \(device.udid) will start backup")
+        DispatchQueue.main.async {
+            self.lastBackupAttempt[device.universalDeviceIdentifier] = Date()
+            self.startBackupSession(forDevice: device, fullBackupMode: false)
         }
     }
 }

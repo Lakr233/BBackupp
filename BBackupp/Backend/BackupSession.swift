@@ -228,6 +228,10 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
     }
 
     private func sendErrorsIfNeeded() {
+        if cancelled {
+            device.config.push(message: "Backup was cancelled")
+            return
+        }
         guard !errors.isEmpty else { return }
         device.config.push(
             message: "Backup Completed with Error(s)\n\(errorDescription)"

@@ -57,6 +57,7 @@ class DeviceManager: NSObject, ObservableObject {
         if scanDeviceIntervalCounter > appConfiguration.scanInterval {
             scanDeviceIntervalCounter = 0
             scanDeviceStatus()
+            backupManager.backupRobotHeartBeat()
         }
     }
 
@@ -73,6 +74,7 @@ class DeviceManager: NSObject, ObservableObject {
         })
 
         let identifiers = appleDevice.listDeviceIdentifiers()
+        var buildDevices = [Device]()
         for udid in identifiers {
             var device: Device? = devicesStore
                 .first { $0.universalDeviceIdentifier == udid }
@@ -83,7 +85,7 @@ class DeviceManager: NSObject, ObservableObject {
                     self.devicesStore.append(build)
                 })
             }
-            device?.populateDeviceInfo()
+            if let device { buildDevices.append(device) }
         }
 
         let removed = devicesStore
@@ -102,6 +104,21 @@ class DeviceManager: NSObject, ObservableObject {
                 self.devicesStore = []
             })
         }
+
+        let group = DispatchGroup()
+        let sem = DispatchSemaphore(value: 8)
+        for device in buildDevices {
+            group.enter()
+            sem.wait()
+            DispatchQueue.global().async {
+                defer {
+                    group.leave()
+                    sem.signal()
+                }
+                device.populateDeviceInfo()
+            }
+        }
+        group.wait()
 
         DispatchQueue.main.async {
             self.objectWillChange.send()

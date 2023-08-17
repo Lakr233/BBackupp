@@ -29,7 +29,7 @@ class Configuration: NSObject, ObservableObject {
             .store(in: &cancellable)
     }
 
-    @PublishedStorage(key: "wiki.qaq.bbackupp.scanInterval", defaultValue: 5)
+    @PublishedStorage(key: "wiki.qaq.bbackupp.scanInterval", defaultValue: 3)
     var scanInterval: Int
 
     @PublishedStorage(key: "wiki.qaq.bbackupp.defaultBackupLocation", defaultValue: documentDir.path)

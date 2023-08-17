@@ -48,6 +48,7 @@ class Device: ObservableObject, Codable, Equatable, Hashable, Identifiable {
             self.config = config
         } else {
             config = .init(universalDeviceIdentifier: universalDeviceIdentifier)
+            appConfiguration.deviceConfiguration[udid] = config
         }
         assert(config.universalDeviceIdentifier == universalDeviceIdentifier)
         config.prepareDeafultBackupDirIfNeeded()
@@ -87,7 +88,7 @@ extension Device {
             self.universalDeviceIdentifier = universalDeviceIdentifier
         }
 
-        var automaticBackupEnabled: Bool = true
+        var automaticBackupEnabled: Bool = false
         var wirelessBackupEnabled: Bool = true
         var requiresCharging: Bool = true
 
@@ -163,6 +164,12 @@ extension Device.Configuration {
         }
     }
 
+    var deviceIdRecordURL: URL {
+        storeLocationURL
+            .appendingPathComponent("DeviceID")
+            .appendingPathExtension("txt")
+    }
+
     var incrementalCacheUrl: URL {
         storeLocationURL.appendingPathComponent("IncrementalCache")
     }
@@ -196,7 +203,7 @@ extension Device.Configuration {
          */
 
         try? universalDeviceIdentifier.write(
-            to: targetLocation.appendingPathComponent("DeviceID.txt"),
+            to: deviceIdRecordURL,
             atomically: true,
             encoding: .utf8
         )
@@ -354,11 +361,36 @@ extension Device.Configuration {
         return ret
     }
 
-    func needsBackup(udid: String) -> Bool {
+    enum SkipBackupReason: LocalizedError {
+        case targetDirectoryNotWritable
+        case targetDirectoryDeviceIDMismatch
+        case invalidConfig
+        case notEnabled
+        case requiresChargingButNot
+        case notInMonitorDateRange
+        case notInEnabledDayOfTheWeek
+    }
+
+    func needsBackup(udid: String) -> Result<Void, SkipBackupReason> {
+        guard automaticBackupEnabled else { return .failure(.notEnabled) }
+
+        var isDir = ObjCBool(false)
+        guard FileManager.default.fileExists(atPath: storeLocationURL.path, isDirectory: &isDir),
+              isDir.boolValue
+        else {
+            return .failure(.targetDirectoryNotWritable)
+        }
+
+        guard let str = try? String(contentsOf: deviceIdRecordURL),
+              str.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == udid.lowercased()
+        else {
+            return .failure(.targetDirectoryDeviceIDMismatch)
+        }
+
         if requiresCharging {
             guard let batteryInfo = appleDevice.obtainDeviceBatteryInfo(udid: udid),
                   (batteryInfo.batteryIsCharging ?? false) || (batteryInfo.externalConnected ?? false)
-            else { return false }
+            else { return .failure(.requiresChargingButNot) }
         }
         let currentDate = Int(Date().timeIntervalSince1970)
         let cal = Calendar.current
@@ -367,7 +399,7 @@ extension Device.Configuration {
         let dateOffset = currentDate - startOfTheDay
 
         if false {}
-        if backupMonitorFrom == backupMonitorTo { return false } // misconfigured, not my bad
+        if backupMonitorFrom == backupMonitorTo { return .failure(.invalidConfig) } // misconfigured, not my bad
         if backupMonitorFrom < backupMonitorTo, // same day
            backupMonitorFrom < dateOffset, dateOffset < backupMonitorTo // in between
         { /* go on */ }
@@ -375,23 +407,23 @@ extension Device.Configuration {
                 dateOffset + 3600 * 24 > backupMonitorFrom || // later then from OR
                 dateOffset < backupMonitorTo // earlier then next day to
         { /* go on */ }
-        else { return false }
+        else { return .failure(.notInMonitorDateRange) }
         // good, now we passed the day check
 
         let weekday = cal.component(.weekday, from: Date())
         switch weekday {
-        case 1: if !automaticBackupOnSunday { return false }
-        case 2: if !automaticBackupOnMonday { return false }
-        case 3: if !automaticBackupOnTuesday { return false }
-        case 4: if !automaticBackupOnWednesday { return false }
-        case 5: if !automaticBackupOnThursday { return false }
-        case 6: if !automaticBackupOnFriday { return false }
-        case 7: if !automaticBackupOnSaturday { return false }
+        case 1: if !automaticBackupOnSunday { return .failure(.notInMonitorDateRange) }
+        case 2: if !automaticBackupOnMonday { return .failure(.notInMonitorDateRange) }
+        case 3: if !automaticBackupOnTuesday { return .failure(.notInMonitorDateRange) }
+        case 4: if !automaticBackupOnWednesday { return .failure(.notInMonitorDateRange) }
+        case 5: if !automaticBackupOnThursday { return .failure(.notInMonitorDateRange) }
+        case 6: if !automaticBackupOnFriday { return .failure(.notInMonitorDateRange) }
+        case 7: if !automaticBackupOnSaturday { return .failure(.notInMonitorDateRange) }
         default:
             assertionFailure()
-            return false
+            return .failure(.invalidConfig)
         }
 
-        return true
+        return .success()
     }
 }

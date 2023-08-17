@@ -14,17 +14,6 @@ class BackupManager: NSObject, ObservableObject {
 
     override private init() {
         super.init()
-        let timer = Timer(
-            timeInterval: 1,
-            target: self,
-            selector: #selector(backupRobotHeartBeat),
-            userInfo: nil,
-            repeats: true
-        )
-        Thread {
-            RunLoop.current.add(timer, forMode: .common)
-            RunLoop.current.run()
-        }.start()
     }
 
     @Published var backupSession: [BackupSession] = []
@@ -155,18 +144,32 @@ class BackupManager: NSObject, ObservableObject {
     private struct DeviceStatus {}
 
     @objc func backupRobotHeartBeat() {
+        NSLog("robot heart beat")
         // the automatic backup happens here!
         deviceManager.devices.forEach {
             let noLongerNeeded = $0.config.walkthroughAndReturnBackupThatIsNoLongerNeeded(
                 backups: backupList[$0.universalDeviceIdentifier, default: []]
             )
+            guard !noLongerNeeded.isEmpty else { return }
+            NSLog("removing \(noLongerNeeded.map(\.uuidString).joined(separator: ", "))")
             DispatchQueue.main.asyncAndWait(execute: DispatchWorkItem {
                 self.delete(backups: noLongerNeeded)
             })
         }
-        for device in deviceManager.devices where device.config.automaticBackupEnabled {
-            guard device.config.needsBackup(udid: device.universalDeviceIdentifier)
-            else { continue }
+        for device in deviceManager.devices {
+            guard !runningBackups.map(\.device.udid).contains(device.udid) else {
+                NSLog("skip \(device.deviceName) \(device.udid) because another backup is running")
+                continue
+            }
+
+            let check = device.config.needsBackup(udid: device.universalDeviceIdentifier)
+            switch check {
+            case let .failure(error):
+                NSLog("skip \(device.deviceName) \(device.udid) because \(error)")
+                continue
+            default: break
+            }
+
             // now the config tells us it is ok to backup
             // but we need to check if there is already an attempt in a somehow short-term
             // for now let's just say whith in 18 hours
@@ -176,8 +179,14 @@ class BackupManager: NSObject, ObservableObject {
                 device.universalDeviceIdentifier,
                 default: Date(timeIntervalSince1970: 0)
             ]
-            guard Date().timeIntervalSince(lastAttempt) > 18 * 3600 else { return }
+            guard Date().timeIntervalSince(lastAttempt) > 18 * 3600 else {
+                NSLog("skip \(device.deviceName) \(device.udid) because last attempt too close")
+                return
+            }
+
+            NSLog("\(device.deviceName) \(device.udid) will start backup")
             DispatchQueue.main.async {
+                self.lastBackupAttempt[device.universalDeviceIdentifier] = Date()
                 self.startBackupSession(forDevice: device, fullBackupMode: false)
             }
         }

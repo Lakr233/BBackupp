@@ -69,10 +69,21 @@ struct BackupSessionView: View {
                     .font(.system(size: 32, weight: .regular, design: .rounded))
                     .frame(width: 32, height: 32)
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("\(session.device.deviceName) - \(session.cratedAt.formatted())")
+                    Text("\(session.device.deviceName)")
                         .font(.system(.headline, design: .rounded, weight: .bold))
-                    Text("\(Int(session.progress.fractionCompleted * 100))% > \(session.progressText.isEmpty ? session.device.universalDeviceIdentifier : session.progressText)")
-                        .font(.system(.footnote))
+                    Text(
+                        session.cratedAt.formatted() + " : " + (
+                            session.isRunning
+                                ? "\(Int(session.progress.fractionCompleted * 100))% > \(session.progressText.isEmpty ? session.device.universalDeviceIdentifier : session.progressText)"
+                                : (
+                                    session.errors.isEmpty
+                                        ? "Backup process completed successfully."
+                                        : session.errorDescription
+                                )
+                        )
+                    )
+                    .lineLimit(1)
+                    .font(.system(.footnote))
                 }
                 Spacer()
                 if session.isRunning {

@@ -77,6 +77,17 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
         DispatchQueue.main.asyncAndWait(execute: DispatchWorkItem {
             self.isRunning = true
         })
+        defer {
+            log("Backup finished")
+            sendErrorsIfNeeded()
+            let progress = Progress(totalUnitCount: 100)
+            progress.completedUnitCount = 100
+            self.progressSender.send(progress)
+            DispatchQueue.main.asyncAndWait(execute: DispatchWorkItem {
+                self.isRunning = false
+            })
+        }
+
         log("Backup started")
         log(">>> \(targetLocation.path)")
         device.config.push(message: [
@@ -110,12 +121,11 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
             connection: connection
         )
 
-        if errors.isEmpty {
-            device.config.push(message: [
-                "Started Archiving Your Backup 🎉",
-                "You can now disconnect your device safely, we will let you know when it's done.",
-            ].joined(separator: "\n"))
-        }
+        guard errors.isEmpty else { return }
+        device.config.push(message: [
+            "Started Archiving Your Backup 🎉",
+            "You can now disconnect your device safely, we will let you know when it's done.",
+        ].joined(separator: "\n"))
 
         do {
             let infoPlist = targetLocation
@@ -130,6 +140,7 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
             try FileManager.default.moveItem(at: infoPlist, to: targetInfoLocation)
         } catch {
             generalFailure(error: error)
+            return
         }
 
         let readMe =
@@ -155,50 +166,28 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
             Backup Complete Date: \(Date().formatted())
             Backup Errors: \(errors.isEmpty ? "None" : errors.map(\.localizedDescription).joined(separator: ", "))
             """
-        try? readMe.write(
-            to: targetLocation
-                .appendingPathComponent("ReadMe")
-                .appendingPathExtension("txt"),
-            atomically: true,
-            encoding: .utf8
-        )
+        do {
+            try readMe.write(
+                to: targetLocation
+                    .appendingPathComponent("ReadMe")
+                    .appendingPathExtension("txt"),
+                atomically: true,
+                encoding: .utf8
+            )
+        } catch {
+            generalFailure(error: error)
+            guard errors.isEmpty else { return }
+        }
 
         do {
-            if errors.isEmpty { try archiveBackup() }
+            try archiveBackup()
         } catch {
-            let prevSuccess = errors.isEmpty
             generalFailure(error: error)
-            if prevSuccess {
-                device.config.push(message: [
-                    "Archive Error",
-                    "An archiving backup error occurred, though prior operations succeeded. Intermediate artifacts could be retained until the next backup.",
-                ].joined(separator: "\n"))
-            }
+            return
         }
 
-        DispatchQueue.main.asyncAndWait(execute: DispatchWorkItem {
-            self.isRunning = false
-            self.progress = Progress(totalUnitCount: 100)
-            self.progress.completedUnitCount = 100
-        })
-        log("Backup finished")
-
-        if errors.isEmpty {
-            device.config.push(message: "Backup Completed 🎉")
-        } else {
-            var presentError = errors
-            if errors.count > 1 {
-                presentError = presentError.filter {
-                    if case AppleMobileDeviceBackup.BackupError.cancelled = $0 {
-                        return false
-                    }
-                    return true
-                }
-            }
-            let errText = presentError.map(\.localizedDescription)
-                .joined(separator: ", ")
-            device.config.push(message: "Backup Completed with Error(s)\n\(errText)")
-        }
+        guard errors.isEmpty else { return }
+        device.config.push(message: "Backup Completed 🎉")
     }
 
     private func archiveBackup() throws {
@@ -224,6 +213,26 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
         log("Archive completed, registering artifact...")
         try backupManager.registerArtifact(session: self, atLocation: zipArchiveLocation)
         backupManager.clean(session: self)
+    }
+
+    var errorDescription: String {
+        let presentError = errors.filter {
+            if case AppleMobileDeviceBackup.BackupError.cancelled = $0 {
+                return false
+            }
+            return true
+        }
+        let errText = presentError.map(\.localizedDescription)
+            .joined(separator: ", ")
+        return errText
+    }
+
+    private func sendErrorsIfNeeded() {
+        guard !errors.isEmpty else { return }
+        device.config.push(
+            message: "Backup Completed with Error(s)\n\(errorDescription)"
+                .trimmingCharacters(in: .whitespacesAndNewlines)
+        )
     }
 }
 
@@ -308,11 +317,15 @@ extension BackupSession: AppleMobileDeviceBackupDelegate {
             lastProgressSent = theProgress
             log("Arriving \(theProgress)%", level: .percent)
             if device.config.notificationSendProgressPercent {
-                var abc = [String](repeating: "░", count: 10)
-                for i in 0 ..< abc.count where Double(i) / Double(abc.count) * 100 >= progress {
-                    abc[i] = "█"
+                if theProgress > 0 {
+                    var abc = [String](repeating: "░", count: 10)
+                    for i in 0 ..< abc.count where Double(i) / Double(abc.count) * 100 >= progress {
+                        abc[i] = "█"
+                    }
+                    device.config.push(message: "\(abc.joined()) - \(theProgress)%")
+                } else {
+                    device.config.push(message: "Data transfer begin!")
                 }
-                device.config.push(message: "\(abc.joined()) - \(theProgress)%")
             }
         }
         DispatchQueue.main.asyncAndWait(execute: DispatchWorkItem {

@@ -160,9 +160,9 @@ class BackupManager: NSObject, ObservableObject {
             let noLongerNeeded = $0.config.walkthroughAndReturnBackupThatIsNoLongerNeeded(
                 backups: backupList[$0.universalDeviceIdentifier, default: []]
             )
-            DispatchQueue.main.asyncAndWait {
+            DispatchQueue.main.asyncAndWait(execute: DispatchWorkItem {
                 self.delete(backups: noLongerNeeded)
-            }
+            })
         }
         for device in deviceManager.devices where device.config.automaticBackupEnabled {
             guard device.config.needsBackup(udid: device.universalDeviceIdentifier)

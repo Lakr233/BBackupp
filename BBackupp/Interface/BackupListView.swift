@@ -54,10 +54,18 @@ struct BackupListView: View {
                 Text(value.device.deviceName)
             }
             .width(min: 100, max: 200)
-            TableColumn("Archived At", value: \.archivedAt) { value in
+            TableColumn("Begin At", value: \.createdAt) { value in
+                Text(value.createdAt.formatted())
+            }
+            .width(min: 120, max: 240)
+            TableColumn("Completed At", value: \.archivedAt) { value in
                 Text(value.archivedAt.formatted())
             }
             .width(min: 120, max: 240)
+            TableColumn("Duration", value: \.duration) { value in
+                Text(stringForInterval(value.duration))
+            }
+            .width(min: 50, max: 120)
             TableColumn("Keep") { value in
                 WiredToggleView(isOn: .constant(value.keep)) {
                     AnyView(Group {})
@@ -138,6 +146,12 @@ struct BackupListView: View {
         .onAppear { rebuildContent(searchKey: "") }
         .navigationTitle("Backups")
         .frame(minWidth: 400, minHeight: 200)
+    }
+
+    func stringForInterval(_ input: TimeInterval) -> String {
+        let fmt = DateComponentsFormatter()
+        fmt.unitsStyle = .abbreviated
+        return fmt.string(from: input) ?? String(input)
     }
 
     func rebuildContent(searchKey: String) {

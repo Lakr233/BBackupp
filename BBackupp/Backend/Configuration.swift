@@ -61,6 +61,9 @@ class Configuration: NSObject, ObservableObject {
     @PublishedStorage(key: "wiki.qaq.bbackupp.deviceConfiguration", defaultValue: [:])
     var deviceConfiguration: [Device.DevcieID: Device.Configuration]
 
+    @PublishedStorage(key: "wiki.qaq.bbackupp.aliveCheckUrl", defaultValue: "")
+    var aliveCheck: String
+
     public func switchDefaultBackupLocaiton(_ url: URL) {
         defaultBackupLocation = url.path
         try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)

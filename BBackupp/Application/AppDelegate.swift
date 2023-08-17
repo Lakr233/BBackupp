@@ -23,6 +23,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             repeats: true
         )
         CFRunLoopAddTimer(CFRunLoopGetMain(), timer, .commonModes)
+        let aliveChecker = Timer(
+            timeInterval: 1,
+            target: self,
+            selector: #selector(postAliveHeartBeatIfNeeded),
+            userInfo: nil,
+            repeats: true
+        )
+        CFRunLoopAddTimer(CFRunLoopGetMain(), aliveChecker, .commonModes)
 
         let reasonForActivity = "\(Constants.appName) is viewing your backup schedule list" as CFString
         var assertionID: IOPMAssertionID = 0
@@ -72,6 +80,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             NSApp.setActivationPolicy(.accessory)
         } else {
             NSApp.setActivationPolicy(.regular)
+        }
+    }
+
+    @objc
+    func postAliveHeartBeatIfNeeded() {
+        let aliveUrl = Configuration.shared.aliveCheck
+        guard !aliveUrl.isEmpty, let url = URL(string: aliveUrl) else { return }
+        DispatchQueue.global().async {
+            URLSession.shared.dataTask(with: URLRequest(url: url)).resume()
         }
     }
 }

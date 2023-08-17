@@ -357,8 +357,7 @@ extension Device.Configuration {
     func needsBackup(udid: String) -> Bool {
         if requiresCharging {
             guard let batteryInfo = appleDevice.obtainDeviceBatteryInfo(udid: udid),
-                  let isCharging = batteryInfo.batteryIsCharging,
-                  isCharging
+                  (batteryInfo.batteryIsCharging ?? false) || (batteryInfo.externalConnected ?? false)
             else { return false }
         }
         let currentDate = Int(Date().timeIntervalSince1970)
@@ -373,7 +372,7 @@ extension Device.Configuration {
            backupMonitorFrom < dateOffset, dateOffset < backupMonitorTo // in between
         { /* go on */ }
         else if backupMonitorFrom > backupMonitorTo, // cross the day
-                dateOffset + 3600 * 24 > backupMonitorFrom, // later then from
+                dateOffset + 3600 * 24 > backupMonitorFrom || // later then from OR
                 dateOffset < backupMonitorTo // earlier then next day to
         { /* go on */ }
         else { return false }

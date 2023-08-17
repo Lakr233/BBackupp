@@ -22,6 +22,8 @@ struct SettingView: View {
                 Divider()
                 iTunesLocation
                 Divider()
+                aliveChecker
+                Divider()
                 HStack(alignment: .center) {
                     Image(systemName: "text.append")
                     Text("End of File")
@@ -113,6 +115,16 @@ struct SettingView: View {
                     .buttonStyle(.borderedProminent)
                 }
                 Text("This is the location your iTunes backups are stored. When you need to restore a device, uncompress our backup and put it there. It will be recognized by iTunes.")
+                    .font(.system(.footnote))
+            }
+        }
+    }
+
+    var aliveChecker: some View {
+        UITemplate.buildSection("Alive Checker") {
+            VStack(alignment: .leading, spacing: 8) {
+                TextField("Alive Checker URL: https://alive.example.com/check", text: $config.aliveCheck)
+                Text("If this option is set, we will perform a HTTP GET request every 60 seconds. It's helpful if you use uptime monitoring service like [Uptime-Kuma](https://github.com/louislam/uptime-kuma/).")
                     .font(.system(.footnote))
             }
         }

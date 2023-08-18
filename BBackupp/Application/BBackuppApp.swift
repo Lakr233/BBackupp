@@ -19,11 +19,11 @@ struct BBackuppApp: App {
 
     init() {
         _ = appConfiguration
+        checkAllStorageLocation()
+
         _ = appleDevice
         _ = deviceManager
         _ = backupManager
-
-        checkAllStorageLocation()
     }
 
     var body: some Scene {

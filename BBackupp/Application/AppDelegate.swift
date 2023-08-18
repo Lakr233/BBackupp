@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         )
         CFRunLoopAddTimer(CFRunLoopGetMain(), timer, .commonModes)
         let aliveChecker = Timer(
-            timeInterval: 1,
+            timeInterval: 60,
             target: self,
             selector: #selector(postAliveHeartBeatIfNeeded),
             userInfo: nil,

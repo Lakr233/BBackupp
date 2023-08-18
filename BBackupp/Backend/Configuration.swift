@@ -85,6 +85,7 @@ class Configuration: NSObject, ObservableObject {
             self._defaultMonitoringRangeFrom.saveFromSubjectValueImmediately()
             self._defaultMonitoringRangeTo.saveFromSubjectValueImmediately()
             self._deviceConfiguration.saveFromSubjectValueImmediately()
+            self._aliveCheck.saveFromSubjectValueImmediately()
         }
     }
 }

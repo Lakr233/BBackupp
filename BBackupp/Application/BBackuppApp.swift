@@ -19,11 +19,14 @@ struct BBackuppApp: App {
 
     init() {
         _ = appConfiguration
-        checkAllStorageLocation()
-
         _ = appleDevice
         _ = deviceManager
         _ = backupManager
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            Self.checkAllStorageLocation()
+            deviceManager.startTimer()
+        }
     }
 
     var body: some Scene {
@@ -35,7 +38,7 @@ struct BBackuppApp: App {
         .commands { SidebarCommands() }
     }
 
-    func checkAllStorageLocation() {
+    static func checkAllStorageLocation() {
         appConfiguration.deviceConfiguration.values.forEach { config in
             let dir = config.storeLocationURL
             let signalFile = dir.appendingPathComponent(".PermissionCheck")
@@ -48,16 +51,21 @@ struct BBackuppApp: App {
         }
     }
 
-    func requestPermission(atLocation: URL, error: Error?) {
+    static func requestPermission(atLocation: URL, error: Error?) {
         while true {
             let alert = NSAlert()
             alert.alertStyle = .critical
-            alert.messageText = "We are unable to write to storage location for your backup, please select storage directory in the up coming panel to grant us the permission."
-            alert.informativeText = error?.localizedDescription ?? atLocation.path
-            alert.addButton(withTitle: "Continue")
-            alert.addButton(withTitle: "Ignore")
-            alert.addButton(withTitle: "Exit")
-            let resp = alert.runModal()
+            alert.messageText = "Please choose the storage directory in the next panel to grant us permission to store your backup."
+            alert.informativeText = "Write error happens at \(atLocation.path): \(error?.localizedDescription ?? "unknown")"
+            alert.addButton(withTitle: "Grant Permission")
+            alert.addButton(withTitle: "Ignore Temporary")
+            alert.addButton(withTitle: "Exit Application")
+            let resp: NSApplication.ModalResponse
+            if let window = NSApp.mainWindow {
+                resp = alert.runSheetModal(for: window)
+            } else {
+                resp = alert.runModal()
+            }
             switch resp {
             case .alertFirstButtonReturn: break
             case .alertSecondButtonReturn: return
@@ -69,7 +77,14 @@ struct BBackuppApp: App {
             let savePanel = NSSavePanel()
             savePanel.directoryURL = atLocation.deletingLastPathComponent()
             savePanel.nameFieldStringValue = atLocation.lastPathComponent
-            savePanel.runModal()
+            savePanel.title = "Please select \(atLocation.path) and click Done"
+            savePanel.prompt = "Grant Permission"
+
+            if let window = NSApp.mainWindow {
+                savePanel.runSheetModal(for: window)
+            } else {
+                savePanel.runModal()
+            }
             if savePanel.url == atLocation { return }
         }
     }

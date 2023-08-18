@@ -62,7 +62,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         alert.messageText = "Quit the app will cancel all backup and disable scheduled backup"
         alert.addButton(withTitle: "Exit")
         alert.addButton(withTitle: "Cancel")
-        let resp = alert.runModal()
+        let resp: NSApplication.ModalResponse
+        if let window = NSApp.mainWindow {
+            resp = alert.runSheetModal(for: window)
+        } else {
+            resp = alert.runModal()
+        }
         return resp == .alertFirstButtonReturn ? .terminateNow : .terminateCancel
     }
 

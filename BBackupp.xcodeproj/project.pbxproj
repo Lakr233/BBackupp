@@ -10,6 +10,7 @@
 		5005A4812A8BACB900F4C351 /* CryptoKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005A4802A8BACB900F4C351 /* CryptoKit.swift */; };
 		5005A4842A8BAE5C00F4C351 /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 5005A4832A8BAE5C00F4C351 /* ZipArchive */; };
 		5005A4862A8BDAE100F4C351 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005A4852A8BDAE100F4C351 /* Date.swift */; };
+		5031BFED2A8FBED100724DA6 /* ModalSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031BFEC2A8FBED100724DA6 /* ModalSheet.swift */; };
 		5031D1C52A864A890089B44F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1C42A864A890089B44F /* Configuration.swift */; };
 		5031D1C72A864EAA0089B44F /* DeviceConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1C62A864EAA0089B44F /* DeviceConfigurationView.swift */; };
 		5031D1C92A8650020089B44F /* UnpairedDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1C82A8650020089B44F /* UnpairedDeviceView.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		5005A4802A8BACB900F4C351 /* CryptoKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoKit.swift; sourceTree = "<group>"; };
 		5005A4852A8BDAE100F4C351 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		5031BFEC2A8FBED100724DA6 /* ModalSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalSheet.swift; sourceTree = "<group>"; };
 		5031D1C42A864A890089B44F /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		5031D1C62A864EAA0089B44F /* DeviceConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConfigurationView.swift; sourceTree = "<group>"; };
 		5031D1C82A8650020089B44F /* UnpairedDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnpairedDeviceView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		50680FFB2A8553F700367607 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5031BFEC2A8FBED100724DA6 /* ModalSheet.swift */,
 				50680FFC2A85540800367607 /* PublishedStorage.swift */,
 				5005A4852A8BDAE100F4C351 /* Date.swift */,
 				5031D1CE2A86796E0089B44F /* UITemplate.swift */,
@@ -296,6 +299,7 @@
 				50FF936C2A88C90E0031843C /* FileManager.swift in Sources */,
 				50680FF52A854A5A00367607 /* SidebarView.swift in Sources */,
 				50FF93782A890CF90031843C /* Backup.swift in Sources */,
+				5031BFED2A8FBED100724DA6 /* ModalSheet.swift in Sources */,
 				50680FF32A8548E800367607 /* WelcomeView.swift in Sources */,
 				50FF936E2A88D6F70031843C /* String.swift in Sources */,
 				504558462A869458006A450C /* BackupProgressListView.swift in Sources */,
@@ -443,7 +447,7 @@
 				CODE_SIGN_ENTITLEMENTS = BBackupp/BBackupp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 6CMYQQFFT8;
@@ -475,7 +479,7 @@
 				CODE_SIGN_ENTITLEMENTS = BBackupp/BBackupp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 6CMYQQFFT8;

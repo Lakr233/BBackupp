@@ -37,6 +37,9 @@ class DeviceManager: NSObject, ObservableObject {
 
     override private init() {
         super.init()
+    }
+
+    func startTimer() {
         let timer = Timer(
             timeInterval: 1,
             target: self,

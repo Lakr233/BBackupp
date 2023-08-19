@@ -175,6 +175,13 @@ class BackupManager: NSObject, ObservableObject {
         default: break
         }
 
+        // requires device unlocked
+        // otherwise if user leave there devices charged at home it will fail of course
+        guard !(device.deviceRecord?.passwordProtected ?? true) else {
+            NSLog("skip \(device.deviceName) \(device.udid) because device is locked")
+            return
+        }
+
         // now the config tells us it is ok to backup
         // but we need to check if there is already an attempt in a somehow short-term
         // for now let's just say whith in 18 hours

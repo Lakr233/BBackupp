@@ -404,7 +404,7 @@ extension Device.Configuration {
            backupMonitorFrom < dateOffset, dateOffset < backupMonitorTo // in between
         { /* go on */ }
         else if backupMonitorFrom > backupMonitorTo, // cross the day
-                dateOffset + 3600 * 24 > backupMonitorFrom || // later then from OR
+                dateOffset > backupMonitorFrom || // later then from OR
                 dateOffset < backupMonitorTo // earlier then next day to
         { /* go on */ }
         else { return .failure(.notInMonitorDateRange) }

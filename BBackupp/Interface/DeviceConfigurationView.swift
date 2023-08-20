@@ -127,14 +127,20 @@ struct DeviceConfigurationView: View {
                     if let runningSession = backupManager.runningSessionForDevice(withIdentifier: device.udid) {
                         backupSession = runningSession
                     } else {
-                        UITemplate.makeConfirmation(
-                            message: "Do you wish to start a full backup?",
-                            firstButtonText: "Incremental",
-                            secondButtonText: "Full Backup"
-                        ) { isFirstButtonReturn in
+                        let alert = NSAlert()
+                        alert.alertStyle = .warning
+                        alert.messageText = "Do you wish to start a full backup?"
+                        alert.addButton(withTitle: "Incremental")
+                        alert.addButton(withTitle: "Full Backup")
+                        alert.addButton(withTitle: "Cancel")
+                        guard let window = NSApp.keyWindow ?? NSApp.windows.first else {
+                            return
+                        }
+                        alert.beginSheetModal(for: window) { resp in
+                            if resp == .alertThirdButtonReturn { return }
                             backupSession = backupManager.startBackupSession(
                                 forDevice: device,
-                                fullBackupMode: !isFirstButtonReturn
+                                fullBackupMode: resp == .alertSecondButtonReturn
                             )
                         }
                     }

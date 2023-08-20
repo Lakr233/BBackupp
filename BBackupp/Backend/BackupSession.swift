@@ -70,6 +70,7 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
     enum BackupError: Error {
         case targetLocationAlreadyExists
         case unableToWriteManifest
+        case snapshotFailedToVerify
     }
 
     private func startBackupExec() {
@@ -79,6 +80,7 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
         })
         defer {
             log("Backup finished")
+            backupManager.clean(session: self)
             sendErrorsIfNeeded()
             let progress = Progress(totalUnitCount: 100)
             progress.completedUnitCount = 100
@@ -120,6 +122,12 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
             delegate: self,
             connection: connection
         )
+        guard errors.isEmpty else { return }
+
+        guard validateStatusInfo(atBackupDir: realBackupDir) else {
+            generalFailure(error: BackupError.snapshotFailedToVerify)
+            return
+        }
 
         guard errors.isEmpty else { return }
         device.config.push(message: [
@@ -212,7 +220,6 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
 
         log("Archive completed, registering artifact...")
         try backupManager.registerArtifact(session: self, atLocation: zipArchiveLocation)
-        backupManager.clean(session: self)
     }
 
     var errorDescription: String {
@@ -237,6 +244,17 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
             message: "Backup Completed with Error(s)\n\(errorDescription)"
                 .trimmingCharacters(in: .whitespacesAndNewlines)
         )
+    }
+
+    func validateStatusInfo(atBackupDir backupDir: URL) -> Bool {
+        let infoUrl = backupDir
+            .appendingPathComponent("Status")
+            .appendingPathExtension("plist")
+        guard let data = try? Data(contentsOf: infoUrl),
+              let dic = try? PropertyListDecoder().decode([String: AnyCodable].self, from: data),
+              let snapshotState = dic["SnapshotState"]?.value as? String
+        else { return false }
+        return snapshotState == "finished"
     }
 }
 

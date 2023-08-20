@@ -5,6 +5,7 @@
 //  Created by QAQ on 2023/8/13.
 //
 
+import AnyCodable
 import Combine
 import Foundation
 
@@ -71,7 +72,6 @@ class BackupManager: NSObject, ObservableObject {
     }
 
     func clean(session: BackupSession) {
-        // since it is only called after registerArtifact so should be good to remove it
         assert(session.targetLocation.path.contains("InProgress"))
         let currentBackupCache = session.targetLocation
             .appendingPathComponent(session.device.universalDeviceIdentifier)

@@ -185,7 +185,7 @@ struct BackupSessionDetailSheet: View {
                 }
             }
         }
-        .frame(minWidth: 600, minHeight: 200, idealHeight: 200)
+        .frame(minWidth: 600, idealWidth: 600, minHeight: 200, idealHeight: 200)
     }
 }
 

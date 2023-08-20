@@ -12,6 +12,7 @@ import IOKit.pwr_mgt
 class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem!
     let popover = StatusBarPopover()
+    var activity: NSObjectProtocol?
 
     override private init() {
         super.init()
@@ -32,13 +33,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         )
         CFRunLoopAddTimer(CFRunLoopGetMain(), aliveChecker, .commonModes)
 
-        let reasonForActivity = "\(Constants.appName) is viewing your backup schedule list" as CFString
+        let reasonForActivity = "\(Constants.appName) is viewing your backup schedule list"
         var assertionID: IOPMAssertionID = 0
         var success = IOPMAssertionCreateWithName(kIOPMAssertionTypeNoDisplaySleep as CFString,
                                                   IOPMAssertionLevel(kIOPMAssertionLevelOn),
-                                                  reasonForActivity,
+                                                  reasonForActivity as CFString,
                                                   &assertionID)
         if success == kIOReturnSuccess { success = IOPMAssertionRelease(assertionID) }
+
+        activity = ProcessInfo.processInfo.beginActivity(options: .userInitiatedAllowingIdleSystemSleep, reason: reasonForActivity)
     }
 
     func applicationDidFinishLaunching(_: Notification) {

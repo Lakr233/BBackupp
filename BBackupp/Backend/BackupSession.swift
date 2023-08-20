@@ -70,7 +70,8 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
     enum BackupError: Error {
         case targetLocationAlreadyExists
         case unableToWriteManifest
-        case snapshotFailedToVerify
+        case unableToReadReceipt
+        case snapshotStateFailedToVerify
     }
 
     private func startBackupExec() {
@@ -124,16 +125,33 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
         )
         guard errors.isEmpty else { return }
 
-        guard validateStatusInfo(atBackupDir: realBackupDir) else {
-            generalFailure(error: BackupError.snapshotFailedToVerify)
-            return
-        }
+        do {
+            let recipeInfoUrl = realBackupDir
+                .appendingPathComponent("Status")
+                .appendingPathExtension("plist")
+            guard let recipeInfoData = try? Data(contentsOf: recipeInfoUrl),
+                  let recipeInfoDic = try? PropertyListDecoder().decode([String: AnyCodable].self, from: recipeInfoData)
+            else {
+                generalFailure(error: BackupError.unableToReadReceipt)
+                return
+            }
 
-        guard errors.isEmpty else { return }
-        device.config.push(message: [
-            "Started Archiving Your Backup 🎉",
-            "You can now disconnect your device safely, we will let you know when it's done.",
-        ].joined(separator: "\n"))
+            guard let snapshotState = recipeInfoDic["SnapshotState"]?.value as? String, snapshotState == "finished" else {
+                generalFailure(error: BackupError.snapshotStateFailedToVerify)
+                return
+            }
+
+            guard errors.isEmpty else { return }
+            device.config.push(message: [
+                "Started Archiving Your Backup 🎉",
+                "You can now disconnect your device safely, we will let you know when it's done.",
+                (""
+                    + "IsFullBackup: \(recipeInfoDic["IsFullBackup"]?.value as? String ?? "Unknown") "
+                    + "Version: \(recipeInfoDic["Version"]?.value as? String ?? "Unknown") "
+                    + "BackupState: \(recipeInfoDic["BackupState"]?.value as? String ?? "Unknown")"
+                ).trimmingCharacters(in: .whitespacesAndNewlines),
+            ].joined(separator: "\n"))
+        }
 
         do {
             let infoPlist = targetLocation
@@ -244,17 +262,6 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
             message: "Backup Completed with Error(s)\n\(errorDescription)"
                 .trimmingCharacters(in: .whitespacesAndNewlines)
         )
-    }
-
-    func validateStatusInfo(atBackupDir backupDir: URL) -> Bool {
-        let infoUrl = backupDir
-            .appendingPathComponent("Status")
-            .appendingPathExtension("plist")
-        guard let data = try? Data(contentsOf: infoUrl),
-              let dic = try? PropertyListDecoder().decode([String: AnyCodable].self, from: data),
-              let snapshotState = dic["SnapshotState"]?.value as? String
-        else { return false }
-        return snapshotState == "finished"
     }
 }
 

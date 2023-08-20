@@ -146,7 +146,7 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
                 "Started Archiving Your Backup 🎉",
                 "You can now disconnect your device safely, we will let you know when it's done.",
                 (""
-                    + "IsFullBackup: \(recipeInfoDic["IsFullBackup"]?.value as? String ?? "Unknown") "
+                    + "IsFullBackup: \((recipeInfoDic["IsFullBackup"]?.value as? Bool)?.description ?? "Unknown") "
                     + "Version: \(recipeInfoDic["Version"]?.value as? String ?? "Unknown") "
                     + "BackupState: \(recipeInfoDic["BackupState"]?.value as? String ?? "Unknown")"
                 ).trimmingCharacters(in: .whitespacesAndNewlines),

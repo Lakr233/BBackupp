@@ -80,15 +80,20 @@ class BackupSession: NSObject, ObservableObject, Identifiable {
             self.isRunning = true
         })
         defer {
-            log("Backup finished")
-            backupManager.clean(session: self)
-            sendErrorsIfNeeded()
             let progress = Progress(totalUnitCount: 100)
             progress.completedUnitCount = 100
             self.progressSender.send(progress)
             DispatchQueue.main.asyncAndWait(execute: DispatchWorkItem {
                 self.isRunning = false
             })
+            log("Backup finished")
+            backupManager.clean(session: self)
+            sendErrorsIfNeeded()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.cancellable.forEach { $0.cancel() }
+                self.progress = progress
+                self.isRunning = false
+            }
         }
 
         log("Backup started")
@@ -342,7 +347,7 @@ extension BackupSession: AppleMobileDeviceBackupDelegate {
         let p = Progress(totalUnitCount: 100)
         p.completedUnitCount = Int64(progress)
         let theProgress = Int(progress)
-        if theProgress - lastProgressSent > 20, theProgress < 100 {
+        if theProgress - lastProgressSent >= 20, theProgress < 100 {
             lastProgressSent = theProgress
             log("Arriving \(theProgress)%", level: .percent)
             if device.config.notificationSendProgressPercent {

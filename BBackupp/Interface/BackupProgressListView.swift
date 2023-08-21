@@ -35,10 +35,17 @@ struct BackupProgressListView: View {
         .toolbar {
             ToolbarItem {
                 Button {
-                    backupManager.cleanCompleted()
+                    UITemplate.makeConfirmation(
+                        message: "Are you sure you want to clean completed backup sessions?",
+                        firstButtonText: "Clean Completed"
+                    ) { yes in
+                        guard yes else { return }
+                        backupManager.cleanCompleted()
+                    }
                 } label: {
                     Label("Clean Completed Session", systemImage: "lasso.and.sparkles")
                 }
+                .disabled(backupManager.backupSession.filter { !$0.isRunning }.count == 0)
             }
         }
         .navigationTitle("Session")

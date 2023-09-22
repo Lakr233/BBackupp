@@ -27,7 +27,11 @@ Currently we support the following notification providers:
 
 - [x] Bark (https://github.com/Finb/Bark)
 
+## Restore
 
+The default unpack location at "Backups" tab is the system storage for mobile backups. Click Save and use Finder to restore to your device.
+
+![Restore Demo](./Resource/Demo/Restore.jpg)
 
 ## License
 

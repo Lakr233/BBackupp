@@ -4,7 +4,4 @@
    <FileRef
       location = "group:BBackupp.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Foundation/AppleMobileDevice">
-   </FileRef>
 </Workspace>

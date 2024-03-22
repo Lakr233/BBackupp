@@ -7,214 +7,502 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5005A4812A8BACB900F4C351 /* CryptoKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005A4802A8BACB900F4C351 /* CryptoKit.swift */; };
-		5005A4842A8BAE5C00F4C351 /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 5005A4832A8BAE5C00F4C351 /* ZipArchive */; };
-		5005A4862A8BDAE100F4C351 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005A4852A8BDAE100F4C351 /* Date.swift */; };
-		5031BFED2A8FBED100724DA6 /* ModalSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031BFEC2A8FBED100724DA6 /* ModalSheet.swift */; };
-		5031D1C52A864A890089B44F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1C42A864A890089B44F /* Configuration.swift */; };
-		5031D1C72A864EAA0089B44F /* DeviceConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1C62A864EAA0089B44F /* DeviceConfigurationView.swift */; };
-		5031D1C92A8650020089B44F /* UnpairedDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1C82A8650020089B44F /* UnpairedDeviceView.swift */; };
-		5031D1CD2A8679080089B44F /* PairInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1CC2A8679080089B44F /* PairInstructionView.swift */; };
-		5031D1CF2A86796E0089B44F /* UITemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031D1CE2A86796E0089B44F /* UITemplate.swift */; };
-		50411FD82A8D0D03009D5CED /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 50411FD72A8D0D03009D5CED /* License.txt */; };
-		504558422A868DB9006A450C /* DeviceInfoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504558412A868DB9006A450C /* DeviceInfoSheet.swift */; };
-		504558442A869452006A450C /* BackupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504558432A869452006A450C /* BackupListView.swift */; };
-		504558462A869458006A450C /* BackupProgressListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504558452A869458006A450C /* BackupProgressListView.swift */; };
-		50680FF32A8548E800367607 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50680FF22A8548E800367607 /* WelcomeView.swift */; };
-		50680FF52A854A5A00367607 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50680FF42A854A5A00367607 /* SidebarView.swift */; };
-		50680FFA2A85537C00367607 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50680FF92A85537C00367607 /* DeviceManager.swift */; };
-		50680FFD2A85540800367607 /* PublishedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50680FFC2A85540800367607 /* PublishedStorage.swift */; };
-		50680FFF2A8555FA00367607 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50680FFE2A8555FA00367607 /* Device.swift */; };
-		506810032A85732200367607 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506810022A85732200367607 /* SettingView.swift */; };
-		50AC93012A84DC95004E99BA /* BBackuppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC93002A84DC95004E99BA /* BBackuppApp.swift */; };
-		50AC93032A84DC95004E99BA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC93022A84DC95004E99BA /* MainView.swift */; };
-		50AC93052A84DC97004E99BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AC93042A84DC97004E99BA /* Assets.xcassets */; };
-		50AC93132A84DD35004E99BA /* AppleMobileDevice in Frameworks */ = {isa = PBXBuildFile; productRef = 50AC93122A84DD35004E99BA /* AppleMobileDevice */; };
-		50FF935D2A87E6880031843C /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF935C2A87E6880031843C /* NSImage.swift */; };
-		50FF93612A87F52A0031843C /* BackupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93602A87F52A0031843C /* BackupManager.swift */; };
-		50FF93632A87F69C0031843C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93622A87F69C0031843C /* AppDelegate.swift */; };
-		50FF93662A87F8970031843C /* StatusBarPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93652A87F8970031843C /* StatusBarPopoverView.swift */; };
-		50FF93682A87F8D80031843C /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93672A87F8D80031843C /* EventMonitor.swift */; };
-		50FF936A2A88C3C40031843C /* WiredToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93692A88C3C40031843C /* WiredToggleView.swift */; };
-		50FF936C2A88C90E0031843C /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF936B2A88C90E0031843C /* FileManager.swift */; };
-		50FF936E2A88D6F70031843C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF936D2A88D6F70031843C /* String.swift */; };
-		50FF93702A88F5A00031843C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF936F2A88F5A00031843C /* Result.swift */; };
-		50FF93722A88F8C50031843C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93712A88F8C50031843C /* Constants.swift */; };
-		50FF93742A88FD280031843C /* NotificationSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93732A88FD280031843C /* NotificationSetupView.swift */; };
-		50FF93762A89078F0031843C /* BackupSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93752A89078F0031843C /* BackupSession.swift */; };
-		50FF93782A890CF90031843C /* Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF93772A890CF90031843C /* Backup.swift */; };
+		501A476E2BA40AE800C6A431 /* BackupTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A476D2BA40AE800C6A431 /* BackupTaskView.swift */; };
+		501A47702BA40CDB00C6A431 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A476F2BA40CDB00C6A431 /* TaskListView.swift */; };
+		501A47772BA448A800C6A431 /* DeviceReachableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A47762BA448A800C6A431 /* DeviceReachableLabel.swift */; };
+		501A477C2BA4576100C6A431 /* CreateBackupPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A477B2BA4576100C6A431 /* CreateBackupPlanView.swift */; };
+		501A477E2BA4582100C6A431 /* ResticTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A477D2BA4582100C6A431 /* ResticTask.swift */; };
+		501A47802BA4587400C6A431 /* BackupPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A477F2BA4587400C6A431 /* BackupPlan.swift */; };
+		501A47842BA46BB300C6A431 /* ResticRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A47832BA46BB300C6A431 /* ResticRepo.swift */; };
+		501A47862BA46C7100C6A431 /* Restic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A47852BA46C7100C6A431 /* Restic.swift */; };
+		501A47882BA482B900C6A431 /* ProgressPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A47872BA482B900C6A431 /* ProgressPanelView.swift */; };
+		501A478A2BA4838500C6A431 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A47892BA4838500C6A431 /* Alert.swift */; };
+		501A478C2BA4859300C6A431 /* BackupPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A478B2BA4859300C6A431 /* BackupPlanView.swift */; };
+		501A478F2BA487CF00C6A431 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A478E2BA487CF00C6A431 /* AppSetting.swift */; };
+		501A47912BA4882700C6A431 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A47902BA4882700C6A431 /* SettingsView.swift */; };
+		501A47932BA5310900C6A431 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A47922BA5310900C6A431 /* String.swift */; };
+		502304C62B483D2B00C8314A /* MessageBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502304C52B483D2B00C8314A /* MessageBoxView.swift */; };
+		503E8F0B2BA5A68D00761C73 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E8F0A2BA5A68D00761C73 /* Codable.swift */; };
+		505D5BF42B99AA780006884F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D5BF32B99AA780006884F /* Data.swift */; };
+		505D5BF62B99AC6C0006884F /* SavePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D5BF52B99AC6C0006884F /* SavePanel.swift */; };
+		505D5BFA2B99BE670006884F /* InputSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D5BF92B99BE670006884F /* InputSheetView.swift */; };
+		505D5BFC2B99D93E0006884F /* BackupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D5BFB2B99D93E0006884F /* BackupListView.swift */; };
+		505D5C032B9AE7520006884F /* OneTimeBackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D5C022B9AE7520006884F /* OneTimeBackupView.swift */; };
+		505D5C052B9AEB8B0006884F /* BackupTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D5C042B9AEB8B0006884F /* BackupTask.swift */; };
+		506A0C192B46A117009C77A5 /* BBackupp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C182B46A117009C77A5 /* BBackupp.swift */; };
+		506A0C1B2B46A117009C77A5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C1A2B46A117009C77A5 /* MainView.swift */; };
+		506A0C1D2B46A119009C77A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506A0C1C2B46A119009C77A5 /* Assets.xcassets */; };
+		506A0C292B46A1AE009C77A5 /* AppleMobileDeviceLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 506A0C282B46A1AE009C77A5 /* AppleMobileDeviceLibrary */; };
+		506A0C2F2B46A2E2009C77A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C2E2B46A2E2009C77A5 /* Constants.swift */; };
+		506A0C322B46A30D009C77A5 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 506A0C312B46A30D009C77A5 /* License.txt */; };
+		506A0C352B46A38D009C77A5 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = 506A0C342B46A38D009C77A5 /* NIO */; };
+		506A0C372B46A38D009C77A5 /* NIOConcurrencyHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 506A0C362B46A38D009C77A5 /* NIOConcurrencyHelpers */; };
+		506A0C392B46A38D009C77A5 /* NIOCore in Frameworks */ = {isa = PBXBuildFile; productRef = 506A0C382B46A38D009C77A5 /* NIOCore */; };
+		506A0C3B2B46A38D009C77A5 /* NIOEmbedded in Frameworks */ = {isa = PBXBuildFile; productRef = 506A0C3A2B46A38D009C77A5 /* NIOEmbedded */; };
+		506A0C3D2B46A38D009C77A5 /* NIOFoundationCompat in Frameworks */ = {isa = PBXBuildFile; productRef = 506A0C3C2B46A38D009C77A5 /* NIOFoundationCompat */; };
+		506A0C402B46A3B1009C77A5 /* AuxiliaryExecute in Frameworks */ = {isa = PBXBuildFile; productRef = 506A0C3F2B46A3B1009C77A5 /* AuxiliaryExecute */; };
+		506A0C462B46A6B3009C77A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C452B46A6B3009C77A5 /* AppDelegate.swift */; };
+		506A0C492B46A896009C77A5 /* MuxRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C482B46A896009C77A5 /* MuxRequest.swift */; };
+		506A0C4B2B46A8B7009C77A5 /* MuxProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C4A2B46A8B7009C77A5 /* MuxProxy.swift */; };
+		506A0C4D2B46ABC6009C77A5 /* MuxRequestPreProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C4C2B46ABC6009C77A5 /* MuxRequestPreProcess.swift */; };
+		506A0C522B46F01F009C77A5 /* MuxRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C512B46F01F009C77A5 /* MuxRequestHandler.swift */; };
+		506A0C542B46FBCF009C77A5 /* MuxResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C532B46FBCF009C77A5 /* MuxResponse.swift */; };
+		506A0C562B46FDA6009C77A5 /* UpstreamResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C552B46FDA6009C77A5 /* UpstreamResponseHandler.swift */; };
+		506A0C582B46FDB7009C77A5 /* UpstreamResponsePreProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C572B46FDB7009C77A5 /* UpstreamResponsePreProcess.swift */; };
+		506A0C5B2B47034B009C77A5 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C5A2B47034B009C77A5 /* Devices.swift */; };
+		506A0C692B470588009C77A5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C5E2B470587009C77A5 /* Date.swift */; };
+		506A0C6C2B470588009C77A5 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C612B470587009C77A5 /* FileManager.swift */; };
+		506A0C6D2B470588009C77A5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C622B470587009C77A5 /* Result.swift */; };
+		506A0C6E2B470588009C77A5 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C632B470587009C77A5 /* NSImage.swift */; };
+		506A0C712B470588009C77A5 /* PublishedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C662B470587009C77A5 /* PublishedStorage.swift */; };
+		506A0C792B470984009C77A5 /* AnyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C752B470984009C77A5 /* AnyDecodable.swift */; };
+		506A0C7A2B470984009C77A5 /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C762B470984009C77A5 /* AnyCodable.swift */; };
+		506A0C7B2B470984009C77A5 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C772B470984009C77A5 /* AnyEncodable.swift */; };
+		506A0C862B4709B1009C77A5 /* AMDManager+DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C7F2B4709B1009C77A5 /* AMDManager+DeviceInfo.swift */; };
+		506A0C872B4709B1009C77A5 /* AMDManager+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C802B4709B1009C77A5 /* AMDManager+Connection.swift */; };
+		506A0C882B4709B1009C77A5 /* AMDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C812B4709B1009C77A5 /* AMDManager.swift */; };
+		506A0C892B4709B1009C77A5 /* AMDManager+Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C822B4709B1009C77A5 /* AMDManager+Pair.swift */; };
+		506A0C8A2B4709B1009C77A5 /* AMDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C832B4709B1009C77A5 /* AMDUtils.swift */; };
+		506A0C8C2B470C95009C77A5 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C8B2B470C95009C77A5 /* WelcomeView.swift */; };
+		506A0C8F2B470CAA009C77A5 /* ColorfulX in Frameworks */ = {isa = PBXBuildFile; productRef = 506A0C8E2B470CAA009C77A5 /* ColorfulX */; };
+		506A0C912B470F6A009C77A5 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C902B470F6A009C77A5 /* Setup.swift */; };
+		506A0C972B471F0F009C77A5 /* RegisterSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0C962B471F0F009C77A5 /* RegisterSheetView.swift */; };
+		50770BD32B4E5F870056A3AB /* WirelessConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50770BD22B4E5F870056A3AB /* WirelessConfigurationView.swift */; };
+		50770BD52B4E5FAD0056A3AB /* SheetPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50770BD42B4E5FAD0056A3AB /* SheetPanelView.swift */; };
+		50770BDC2B4E7A7A0056A3AB /* BackupEncryptionConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50770BDB2B4E7A7A0056A3AB /* BackupEncryptionConfigurationView.swift */; };
+		50770BDE2B4E7F5D0056A3AB /* DeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50770BDD2B4E7F5D0056A3AB /* DeviceView.swift */; };
+		50770BE12B4E801F0056A3AB /* BackupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50770BE02B4E801F0056A3AB /* BackupManager.swift */; };
+		5096BCB92B4835AD00F16F4C /* PairRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5096BCB82B4835AD00F16F4C /* PairRecord.swift */; };
+		509FA5B92B99A5750096C2DB /* ExportPairRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509FA5B82B99A5750096C2DB /* ExportPairRecordView.swift */; };
+		50B990812BA5D5390035BF05 /* BackupPlanTaskPreviewPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B990802BA5D5390035BF05 /* BackupPlanTaskPreviewPanelView.swift */; };
+		50B990832BA5D7A10035BF05 /* BackupPlanTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B990822BA5D7A10035BF05 /* BackupPlanTaskItemView.swift */; };
+		50B990852BA5E2BE0035BF05 /* BackupPlanTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B990842BA5E2BE0035BF05 /* BackupPlanTaskView.swift */; };
+		50B990872BA6068A0035BF05 /* AMDManager+Apps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B990862BA6068A0035BF05 /* AMDManager+Apps.swift */; };
+		50B990892BA611CE0035BF05 /* DownloadSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B990882BA611CE0035BF05 /* DownloadSeed.swift */; };
+		50B9908B2BA61BE40035BF05 /* MacAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9908A2BA61BE40035BF05 /* MacAddress.swift */; };
+		50B990A02BA623120035BF05 /* ApplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 50B9909F2BA623120035BF05 /* ApplePackage */; };
+		50B990A22BA62EE80035BF05 /* ResticBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B990A12BA62EE80035BF05 /* ResticBackup.swift */; };
+		50C60CB32BA536E000DA4B3D /* BetterCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 50C60CB22BA536E000DA4B3D /* BetterCodable */; };
+		50C60CB52BA53AF400DA4B3D /* BarkNotificationSetupPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C60CB42BA53AF400DA4B3D /* BarkNotificationSetupPanelView.swift */; };
+		50C60CB72BA53B9F00DA4B3D /* SectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C60CB62BA53B9F00DA4B3D /* SectionBuilder.swift */; };
+		50C60CB92BA53E0000DA4B3D /* TelegramNotificationSetupPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C60CB82BA53E0000DA4B3D /* TelegramNotificationSetupPanelView.swift */; };
+		50C60CBB2BA5491100DA4B3D /* ManageAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C60CBA2BA5491100DA4B3D /* ManageAccountView.swift */; };
+		50C60CBE2BA54E5C00DA4B3D /* AppStoreBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C60CBD2BA54E5C00DA4B3D /* AppStoreBackend.swift */; };
+		50C60CC32BA5680200DA4B3D /* DecodeSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C60CC22BA5680200DA4B3D /* DecodeSize.swift */; };
+		50C60CC52BA56CC900DA4B3D /* StatusBarPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C60CC42BA56CC900DA4B3D /* StatusBarPopoverView.swift */; };
+		50C60CC72BA56EEA00DA4B3D /* BackupPlanTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C60CC62BA56EEA00DA4B3D /* BackupPlanTask.swift */; };
+		50CA8EC32B512AD8001C12DD /* SymbolPickerPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EC22B512AD8001C12DD /* SymbolPickerPanelView.swift */; };
+		50CA8EC52B5156A1001C12DD /* WelcomeColor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CA8EC42B5156A1001C12DD /* WelcomeColor.xcassets */; };
+		50CA8EC72B515795001C12DD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EC62B515795001C12DD /* Color.swift */; };
+		50CA8ECB2B516934001C12DD /* License.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 50CA8ECA2B516934001C12DD /* License.resolved */; };
+		50E3990C2B47F3CB009D3E90 /* UnregisteredDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3990B2B47F3CB009D3E90 /* UnregisteredDevice.swift */; };
+		50E3990E2B47F3D9009D3E90 /* UnregisteredDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3990D2B47F3D9009D3E90 /* UnregisteredDeviceView.swift */; };
+		50E399102B47F3E6009D3E90 /* RegisterDeviceSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3990F2B47F3E6009D3E90 /* RegisterDeviceSheetView.swift */; };
+		50E399122B480884009D3E90 /* RegisterStepHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E399112B480884009D3E90 /* RegisterStepHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5005A4802A8BACB900F4C351 /* CryptoKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoKit.swift; sourceTree = "<group>"; };
-		5005A4852A8BDAE100F4C351 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		5031BFEC2A8FBED100724DA6 /* ModalSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalSheet.swift; sourceTree = "<group>"; };
-		5031D1C42A864A890089B44F /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		5031D1C62A864EAA0089B44F /* DeviceConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConfigurationView.swift; sourceTree = "<group>"; };
-		5031D1C82A8650020089B44F /* UnpairedDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnpairedDeviceView.swift; sourceTree = "<group>"; };
-		5031D1CC2A8679080089B44F /* PairInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairInstructionView.swift; sourceTree = "<group>"; };
-		5031D1CE2A86796E0089B44F /* UITemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITemplate.swift; sourceTree = "<group>"; };
-		50411FD72A8D0D03009D5CED /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
-		504558412A868DB9006A450C /* DeviceInfoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoSheet.swift; sourceTree = "<group>"; };
-		504558432A869452006A450C /* BackupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupListView.swift; sourceTree = "<group>"; };
-		504558452A869458006A450C /* BackupProgressListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupProgressListView.swift; sourceTree = "<group>"; };
-		50680FF22A8548E800367607 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		50680FF42A854A5A00367607 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
-		50680FF92A85537C00367607 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
-		50680FFC2A85540800367607 /* PublishedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishedStorage.swift; sourceTree = "<group>"; };
-		50680FFE2A8555FA00367607 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		506810022A85732200367607 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		50AC92FD2A84DC95004E99BA /* BBackupp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBackupp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		50AC93002A84DC95004E99BA /* BBackuppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBackuppApp.swift; sourceTree = "<group>"; };
-		50AC93022A84DC95004E99BA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		50AC93042A84DC97004E99BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		50AC93092A84DC97004E99BA /* BBackupp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BBackupp.entitlements; sourceTree = "<group>"; };
-		50FF935C2A87E6880031843C /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
-		50FF93602A87F52A0031843C /* BackupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupManager.swift; sourceTree = "<group>"; };
-		50FF93622A87F69C0031843C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50FF93642A87F8400031843C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		50FF93652A87F8970031843C /* StatusBarPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarPopoverView.swift; sourceTree = "<group>"; };
-		50FF93672A87F8D80031843C /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
-		50FF93692A88C3C40031843C /* WiredToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiredToggleView.swift; sourceTree = "<group>"; };
-		50FF936B2A88C90E0031843C /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
-		50FF936D2A88D6F70031843C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		50FF936F2A88F5A00031843C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		50FF93712A88F8C50031843C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		50FF93732A88FD280031843C /* NotificationSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetupView.swift; sourceTree = "<group>"; };
-		50FF93752A89078F0031843C /* BackupSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupSession.swift; sourceTree = "<group>"; };
-		50FF93772A890CF90031843C /* Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backup.swift; sourceTree = "<group>"; };
+		50151C3E2BAB0A1900D694A7 /* ApplePackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ApplePackage; sourceTree = "<group>"; };
+		501A476D2BA40AE800C6A431 /* BackupTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupTaskView.swift; sourceTree = "<group>"; };
+		501A476F2BA40CDB00C6A431 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		501A47762BA448A800C6A431 /* DeviceReachableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceReachableLabel.swift; sourceTree = "<group>"; };
+		501A47782BA4566600C6A431 /* EmbedRestic.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = EmbedRestic.sh; sourceTree = "<group>"; };
+		501A477B2BA4576100C6A431 /* CreateBackupPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBackupPlanView.swift; sourceTree = "<group>"; };
+		501A477D2BA4582100C6A431 /* ResticTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResticTask.swift; sourceTree = "<group>"; };
+		501A477F2BA4587400C6A431 /* BackupPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupPlan.swift; sourceTree = "<group>"; };
+		501A47832BA46BB300C6A431 /* ResticRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResticRepo.swift; sourceTree = "<group>"; };
+		501A47852BA46C7100C6A431 /* Restic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restic.swift; sourceTree = "<group>"; };
+		501A47872BA482B900C6A431 /* ProgressPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPanelView.swift; sourceTree = "<group>"; };
+		501A47892BA4838500C6A431 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		501A478B2BA4859300C6A431 /* BackupPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupPlanView.swift; sourceTree = "<group>"; };
+		501A478E2BA487CF00C6A431 /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
+		501A47902BA4882700C6A431 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		501A47922BA5310900C6A431 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		502304C52B483D2B00C8314A /* MessageBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBoxView.swift; sourceTree = "<group>"; };
+		503E8F0A2BA5A68D00761C73 /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
+		505D5BF32B99AA780006884F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		505D5BF52B99AC6C0006884F /* SavePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePanel.swift; sourceTree = "<group>"; };
+		505D5BF92B99BE670006884F /* InputSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSheetView.swift; sourceTree = "<group>"; };
+		505D5BFB2B99D93E0006884F /* BackupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupListView.swift; sourceTree = "<group>"; };
+		505D5C022B9AE7520006884F /* OneTimeBackupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeBackupView.swift; sourceTree = "<group>"; };
+		505D5C042B9AEB8B0006884F /* BackupTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupTask.swift; sourceTree = "<group>"; };
+		506A0C152B46A117009C77A5 /* BBackupp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBackupp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		506A0C182B46A117009C77A5 /* BBackupp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBackupp.swift; sourceTree = "<group>"; };
+		506A0C1A2B46A117009C77A5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		506A0C1C2B46A119009C77A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		506A0C212B46A119009C77A5 /* BBackupp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BBackupp.entitlements; sourceTree = "<group>"; };
+		506A0C2D2B46A29C009C77A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		506A0C2E2B46A2E2009C77A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		506A0C312B46A30D009C77A5 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		506A0C452B46A6B3009C77A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		506A0C482B46A896009C77A5 /* MuxRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxRequest.swift; sourceTree = "<group>"; };
+		506A0C4A2B46A8B7009C77A5 /* MuxProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxProxy.swift; sourceTree = "<group>"; };
+		506A0C4C2B46ABC6009C77A5 /* MuxRequestPreProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxRequestPreProcess.swift; sourceTree = "<group>"; };
+		506A0C512B46F01F009C77A5 /* MuxRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxRequestHandler.swift; sourceTree = "<group>"; };
+		506A0C532B46FBCF009C77A5 /* MuxResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxResponse.swift; sourceTree = "<group>"; };
+		506A0C552B46FDA6009C77A5 /* UpstreamResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpstreamResponseHandler.swift; sourceTree = "<group>"; };
+		506A0C572B46FDB7009C77A5 /* UpstreamResponsePreProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpstreamResponsePreProcess.swift; sourceTree = "<group>"; };
+		506A0C5A2B47034B009C77A5 /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
+		506A0C5E2B470587009C77A5 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		506A0C612B470587009C77A5 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		506A0C622B470587009C77A5 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		506A0C632B470587009C77A5 /* NSImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
+		506A0C662B470587009C77A5 /* PublishedStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedStorage.swift; sourceTree = "<group>"; };
+		506A0C752B470984009C77A5 /* AnyDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDecodable.swift; sourceTree = "<group>"; };
+		506A0C762B470984009C77A5 /* AnyCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
+		506A0C772B470984009C77A5 /* AnyEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		506A0C7F2B4709B1009C77A5 /* AMDManager+DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMDManager+DeviceInfo.swift"; sourceTree = "<group>"; };
+		506A0C802B4709B1009C77A5 /* AMDManager+Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMDManager+Connection.swift"; sourceTree = "<group>"; };
+		506A0C812B4709B1009C77A5 /* AMDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMDManager.swift; sourceTree = "<group>"; };
+		506A0C822B4709B1009C77A5 /* AMDManager+Pair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMDManager+Pair.swift"; sourceTree = "<group>"; };
+		506A0C832B4709B1009C77A5 /* AMDUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMDUtils.swift; sourceTree = "<group>"; };
+		506A0C8B2B470C95009C77A5 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		506A0C902B470F6A009C77A5 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
+		506A0C962B471F0F009C77A5 /* RegisterSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSheetView.swift; sourceTree = "<group>"; };
+		50770BD22B4E5F870056A3AB /* WirelessConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WirelessConfigurationView.swift; sourceTree = "<group>"; };
+		50770BD42B4E5FAD0056A3AB /* SheetPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetPanelView.swift; sourceTree = "<group>"; };
+		50770BDB2B4E7A7A0056A3AB /* BackupEncryptionConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupEncryptionConfigurationView.swift; sourceTree = "<group>"; };
+		50770BDD2B4E7F5D0056A3AB /* DeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceView.swift; sourceTree = "<group>"; };
+		50770BE02B4E801F0056A3AB /* BackupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupManager.swift; sourceTree = "<group>"; };
+		5096BCB82B4835AD00F16F4C /* PairRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairRecord.swift; sourceTree = "<group>"; };
+		509FA5B82B99A5750096C2DB /* ExportPairRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPairRecordView.swift; sourceTree = "<group>"; };
+		50B990802BA5D5390035BF05 /* BackupPlanTaskPreviewPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupPlanTaskPreviewPanelView.swift; sourceTree = "<group>"; };
+		50B990822BA5D7A10035BF05 /* BackupPlanTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupPlanTaskItemView.swift; sourceTree = "<group>"; };
+		50B990842BA5E2BE0035BF05 /* BackupPlanTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupPlanTaskView.swift; sourceTree = "<group>"; };
+		50B990862BA6068A0035BF05 /* AMDManager+Apps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AMDManager+Apps.swift"; sourceTree = "<group>"; };
+		50B990882BA611CE0035BF05 /* DownloadSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSeed.swift; sourceTree = "<group>"; };
+		50B9908A2BA61BE40035BF05 /* MacAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAddress.swift; sourceTree = "<group>"; };
+		50B990A12BA62EE80035BF05 /* ResticBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResticBackup.swift; sourceTree = "<group>"; };
+		50C52C4A2BA30D4900DDA49D /* EmbedMobileBackup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = EmbedMobileBackup.sh; sourceTree = "<group>"; };
+		50C60CB42BA53AF400DA4B3D /* BarkNotificationSetupPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarkNotificationSetupPanelView.swift; sourceTree = "<group>"; };
+		50C60CB62BA53B9F00DA4B3D /* SectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBuilder.swift; sourceTree = "<group>"; };
+		50C60CB82BA53E0000DA4B3D /* TelegramNotificationSetupPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramNotificationSetupPanelView.swift; sourceTree = "<group>"; };
+		50C60CBA2BA5491100DA4B3D /* ManageAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountView.swift; sourceTree = "<group>"; };
+		50C60CBD2BA54E5C00DA4B3D /* AppStoreBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreBackend.swift; sourceTree = "<group>"; };
+		50C60CBF2BA561EF00DA4B3D /* EmbedPget.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = EmbedPget.sh; sourceTree = "<group>"; };
+		50C60CC22BA5680200DA4B3D /* DecodeSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeSize.swift; sourceTree = "<group>"; };
+		50C60CC42BA56CC900DA4B3D /* StatusBarPopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarPopoverView.swift; sourceTree = "<group>"; };
+		50C60CC62BA56EEA00DA4B3D /* BackupPlanTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupPlanTask.swift; sourceTree = "<group>"; };
+		50CA7B392BA842770012F487 /* Version.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Version.resolved; sourceTree = "<group>"; };
+		50CA8EC22B512AD8001C12DD /* SymbolPickerPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolPickerPanelView.swift; sourceTree = "<group>"; };
+		50CA8EC42B5156A1001C12DD /* WelcomeColor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WelcomeColor.xcassets; sourceTree = "<group>"; };
+		50CA8EC62B515795001C12DD /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		50CA8ECA2B516934001C12DD /* License.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.resolved; sourceTree = "<group>"; };
+		50E3990B2B47F3CB009D3E90 /* UnregisteredDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnregisteredDevice.swift; sourceTree = "<group>"; };
+		50E3990D2B47F3D9009D3E90 /* UnregisteredDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnregisteredDeviceView.swift; sourceTree = "<group>"; };
+		50E3990F2B47F3E6009D3E90 /* RegisterDeviceSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDeviceSheetView.swift; sourceTree = "<group>"; };
+		50E399112B480884009D3E90 /* RegisterStepHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterStepHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		50AC92FA2A84DC95004E99BA /* Frameworks */ = {
+		506A0C122B46A117009C77A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50AC93132A84DD35004E99BA /* AppleMobileDevice in Frameworks */,
-				5005A4842A8BAE5C00F4C351 /* ZipArchive in Frameworks */,
+				506A0C372B46A38D009C77A5 /* NIOConcurrencyHelpers in Frameworks */,
+				506A0C292B46A1AE009C77A5 /* AppleMobileDeviceLibrary in Frameworks */,
+				506A0C392B46A38D009C77A5 /* NIOCore in Frameworks */,
+				506A0C352B46A38D009C77A5 /* NIO in Frameworks */,
+				506A0C3D2B46A38D009C77A5 /* NIOFoundationCompat in Frameworks */,
+				506A0C3B2B46A38D009C77A5 /* NIOEmbedded in Frameworks */,
+				50C60CB32BA536E000DA4B3D /* BetterCodable in Frameworks */,
+				506A0C8F2B470CAA009C77A5 /* ColorfulX in Frameworks */,
+				50B990A02BA623120035BF05 /* ApplePackage in Frameworks */,
+				506A0C402B46A3B1009C77A5 /* AuxiliaryExecute in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		50680FEF2A85451300367607 /* Application */ = {
+		50082F932BAB01500077F647 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				50AC93002A84DC95004E99BA /* BBackuppApp.swift */,
-				50FF93622A87F69C0031843C /* AppDelegate.swift */,
-				50FF93712A88F8C50031843C /* Constants.swift */,
+				50151C3E2BAB0A1900D694A7 /* ApplePackage */,
 			);
-			path = Application;
+			path = Library;
 			sourceTree = "<group>";
 		};
-		50680FF02A85451900367607 /* Interface */ = {
+		501A47822BA46BAA00C6A431 /* Restic */ = {
 			isa = PBXGroup;
 			children = (
-				50AC93022A84DC95004E99BA /* MainView.swift */,
-				50680FF22A8548E800367607 /* WelcomeView.swift */,
-				50680FF42A854A5A00367607 /* SidebarView.swift */,
-				5031D1C62A864EAA0089B44F /* DeviceConfigurationView.swift */,
-				50FF93732A88FD280031843C /* NotificationSetupView.swift */,
-				5031D1CC2A8679080089B44F /* PairInstructionView.swift */,
-				5031D1C82A8650020089B44F /* UnpairedDeviceView.swift */,
-				504558412A868DB9006A450C /* DeviceInfoSheet.swift */,
-				506810022A85732200367607 /* SettingView.swift */,
-				504558432A869452006A450C /* BackupListView.swift */,
-				504558452A869458006A450C /* BackupProgressListView.swift */,
-				50FF93652A87F8970031843C /* StatusBarPopoverView.swift */,
-				50FF93692A88C3C40031843C /* WiredToggleView.swift */,
+				501A47852BA46C7100C6A431 /* Restic.swift */,
+				501A477D2BA4582100C6A431 /* ResticTask.swift */,
+				501A47832BA46BB300C6A431 /* ResticRepo.swift */,
+				50B990A12BA62EE80035BF05 /* ResticBackup.swift */,
 			);
-			path = Interface;
+			path = Restic;
 			sourceTree = "<group>";
 		};
-		50680FF12A85451E00367607 /* Resources */ = {
+		501A478D2BA487BC00C6A431 /* AppSetting */ = {
 			isa = PBXGroup;
 			children = (
-				50AC93042A84DC97004E99BA /* Assets.xcassets */,
-				50411FD72A8D0D03009D5CED /* License.txt */,
+				501A478E2BA487CF00C6A431 /* AppSetting.swift */,
 			);
-			path = Resources;
+			path = AppSetting;
 			sourceTree = "<group>";
 		};
-		50680FF82A85536800367607 /* Backend */ = {
+		506A0C0C2B46A117009C77A5 = {
 			isa = PBXGroup;
 			children = (
-				5031D1C42A864A890089B44F /* Configuration.swift */,
-				50680FFE2A8555FA00367607 /* Device.swift */,
-				50680FF92A85537C00367607 /* DeviceManager.swift */,
-				50FF93772A890CF90031843C /* Backup.swift */,
-				50FF93752A89078F0031843C /* BackupSession.swift */,
-				50FF93602A87F52A0031843C /* BackupManager.swift */,
-			);
-			path = Backend;
-			sourceTree = "<group>";
-		};
-		50680FFB2A8553F700367607 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				5031BFEC2A8FBED100724DA6 /* ModalSheet.swift */,
-				50680FFC2A85540800367607 /* PublishedStorage.swift */,
-				5005A4852A8BDAE100F4C351 /* Date.swift */,
-				5031D1CE2A86796E0089B44F /* UITemplate.swift */,
-				50FF936B2A88C90E0031843C /* FileManager.swift */,
-				50FF935C2A87E6880031843C /* NSImage.swift */,
-				50FF936D2A88D6F70031843C /* String.swift */,
-				50FF936F2A88F5A00031843C /* Result.swift */,
-				50FF93672A87F8D80031843C /* EventMonitor.swift */,
-				5005A4802A8BACB900F4C351 /* CryptoKit.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		50AC92F42A84DC95004E99BA = {
-			isa = PBXGroup;
-			children = (
-				50AC92FF2A84DC95004E99BA /* BBackupp */,
-				50AC92FE2A84DC95004E99BA /* Products */,
-				50AC930F2A84DCD8004E99BA /* Frameworks */,
+				506A0C172B46A117009C77A5 /* BBackupp */,
+				506A0C162B46A117009C77A5 /* Products */,
+				506A0C2A2B46A1B4009C77A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		50AC92FE2A84DC95004E99BA /* Products */ = {
+		506A0C162B46A117009C77A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50AC92FD2A84DC95004E99BA /* BBackupp.app */,
+				506A0C152B46A117009C77A5 /* BBackupp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		50AC92FF2A84DC95004E99BA /* BBackupp */ = {
+		506A0C172B46A117009C77A5 /* BBackupp */ = {
 			isa = PBXGroup;
 			children = (
-				50FF93642A87F8400031843C /* Info.plist */,
-				50AC93092A84DC97004E99BA /* BBackupp.entitlements */,
-				50680FEF2A85451300367607 /* Application */,
-				50680FF02A85451900367607 /* Interface */,
-				50680FF82A85536800367607 /* Backend */,
-				50680FFB2A8553F700367607 /* Extension */,
-				50680FF12A85451E00367607 /* Resources */,
+				506A0C2D2B46A29C009C77A5 /* Info.plist */,
+				506A0C212B46A119009C77A5 /* BBackupp.entitlements */,
+				50CA8ECA2B516934001C12DD /* License.resolved */,
+				50CA7B392BA842770012F487 /* Version.resolved */,
+				506A0C2B2B46A21D009C77A5 /* App */,
+				506A0C422B46A412009C77A5 /* Backend */,
+				506A0C2C2B46A22A009C77A5 /* Interface */,
+				506A0C5C2B470587009C77A5 /* Extension */,
+				50082F932BAB01500077F647 /* Library */,
+				506A0C302B46A302009C77A5 /* Resources */,
 			);
 			path = BBackupp;
 			sourceTree = "<group>";
 		};
-		50AC930F2A84DCD8004E99BA /* Frameworks */ = {
+		506A0C2A2B46A1B4009C77A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		506A0C2B2B46A21D009C77A5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				506A0C182B46A117009C77A5 /* BBackupp.swift */,
+				506A0C902B470F6A009C77A5 /* Setup.swift */,
+				506A0C452B46A6B3009C77A5 /* AppDelegate.swift */,
+				506A0C2E2B46A2E2009C77A5 /* Constants.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		506A0C2C2B46A22A009C77A5 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				506A0C942B471EF3009C77A5 /* Views */,
+				506A0C952B471EF9009C77A5 /* Pages */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		506A0C302B46A302009C77A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				506A0C1C2B46A119009C77A5 /* Assets.xcassets */,
+				50C52C4A2BA30D4900DDA49D /* EmbedMobileBackup.sh */,
+				501A47782BA4566600C6A431 /* EmbedRestic.sh */,
+				50C60CBF2BA561EF00DA4B3D /* EmbedPget.sh */,
+				506A0C312B46A30D009C77A5 /* License.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		506A0C422B46A412009C77A5 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				50C60CBC2BA54E5600DA4B3D /* AppStore */,
+				501A478D2BA487BC00C6A431 /* AppSetting */,
+				50770BDF2B4E80160056A3AB /* Backup */,
+				501A47822BA46BAA00C6A431 /* Restic */,
+				506A0C732B470984009C77A5 /* AnyCodable */,
+				506A0C7C2B4709B1009C77A5 /* AppleMobileDevice */,
+				506A0C592B470340009C77A5 /* Devices */,
+				506A0C472B46A891009C77A5 /* MuxProxy */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		506A0C472B46A891009C77A5 /* MuxProxy */ = {
+			isa = PBXGroup;
+			children = (
+				506A0C4A2B46A8B7009C77A5 /* MuxProxy.swift */,
+				506A0C482B46A896009C77A5 /* MuxRequest.swift */,
+				506A0C532B46FBCF009C77A5 /* MuxResponse.swift */,
+				506A0C4C2B46ABC6009C77A5 /* MuxRequestPreProcess.swift */,
+				506A0C512B46F01F009C77A5 /* MuxRequestHandler.swift */,
+				506A0C552B46FDA6009C77A5 /* UpstreamResponseHandler.swift */,
+				506A0C572B46FDB7009C77A5 /* UpstreamResponsePreProcess.swift */,
+			);
+			path = MuxProxy;
+			sourceTree = "<group>";
+		};
+		506A0C592B470340009C77A5 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				506A0C5A2B47034B009C77A5 /* Devices.swift */,
+				5096BCB82B4835AD00F16F4C /* PairRecord.swift */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		506A0C5C2B470587009C77A5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				506A0C5E2B470587009C77A5 /* Date.swift */,
+				505D5BF32B99AA780006884F /* Data.swift */,
+				50B9908A2BA61BE40035BF05 /* MacAddress.swift */,
+				501A47922BA5310900C6A431 /* String.swift */,
+				50CA8EC62B515795001C12DD /* Color.swift */,
+				506A0C612B470587009C77A5 /* FileManager.swift */,
+				506A0C662B470587009C77A5 /* PublishedStorage.swift */,
+				503E8F0A2BA5A68D00761C73 /* Codable.swift */,
+				506A0C622B470587009C77A5 /* Result.swift */,
+				506A0C632B470587009C77A5 /* NSImage.swift */,
+				501A47892BA4838500C6A431 /* Alert.swift */,
+				505D5BF52B99AC6C0006884F /* SavePanel.swift */,
+				50C60CC22BA5680200DA4B3D /* DecodeSize.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		506A0C732B470984009C77A5 /* AnyCodable */ = {
+			isa = PBXGroup;
+			children = (
+				506A0C762B470984009C77A5 /* AnyCodable.swift */,
+				506A0C752B470984009C77A5 /* AnyDecodable.swift */,
+				506A0C772B470984009C77A5 /* AnyEncodable.swift */,
+			);
+			path = AnyCodable;
+			sourceTree = "<group>";
+		};
+		506A0C7C2B4709B1009C77A5 /* AppleMobileDevice */ = {
+			isa = PBXGroup;
+			children = (
+				506A0C812B4709B1009C77A5 /* AMDManager.swift */,
+				506A0C7F2B4709B1009C77A5 /* AMDManager+DeviceInfo.swift */,
+				506A0C802B4709B1009C77A5 /* AMDManager+Connection.swift */,
+				506A0C822B4709B1009C77A5 /* AMDManager+Pair.swift */,
+				50B990862BA6068A0035BF05 /* AMDManager+Apps.swift */,
+				506A0C832B4709B1009C77A5 /* AMDUtils.swift */,
+			);
+			path = AppleMobileDevice;
+			sourceTree = "<group>";
+		};
+		506A0C942B471EF3009C77A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				50770BD42B4E5FAD0056A3AB /* SheetPanelView.swift */,
+				501A47872BA482B900C6A431 /* ProgressPanelView.swift */,
+				502304C52B483D2B00C8314A /* MessageBoxView.swift */,
+				50CA8EC22B512AD8001C12DD /* SymbolPickerPanelView.swift */,
+				505D5BF92B99BE670006884F /* InputSheetView.swift */,
+				50C60CB62BA53B9F00DA4B3D /* SectionBuilder.swift */,
+				50B990822BA5D7A10035BF05 /* BackupPlanTaskItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		506A0C952B471EF9009C77A5 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				50E3990A2B47F39C009D3E90 /* App */,
+				50E399092B47F395009D3E90 /* Register */,
+				50770BD12B4E5F7C0056A3AB /* Configuration */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		50770BD12B4E5F7C0056A3AB /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				509FA5B82B99A5750096C2DB /* ExportPairRecordView.swift */,
+				50770BD22B4E5F870056A3AB /* WirelessConfigurationView.swift */,
+				50770BDB2B4E7A7A0056A3AB /* BackupEncryptionConfigurationView.swift */,
+				50C60CB42BA53AF400DA4B3D /* BarkNotificationSetupPanelView.swift */,
+				50C60CB82BA53E0000DA4B3D /* TelegramNotificationSetupPanelView.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		50770BDF2B4E80160056A3AB /* Backup */ = {
+			isa = PBXGroup;
+			children = (
+				50770BE02B4E801F0056A3AB /* BackupManager.swift */,
+				505D5C042B9AEB8B0006884F /* BackupTask.swift */,
+				501A477F2BA4587400C6A431 /* BackupPlan.swift */,
+				50C60CC62BA56EEA00DA4B3D /* BackupPlanTask.swift */,
+			);
+			path = Backup;
+			sourceTree = "<group>";
+		};
+		50C60CBC2BA54E5600DA4B3D /* AppStore */ = {
+			isa = PBXGroup;
+			children = (
+				50C60CBD2BA54E5C00DA4B3D /* AppStoreBackend.swift */,
+				50B990882BA611CE0035BF05 /* DownloadSeed.swift */,
+			);
+			path = AppStore;
+			sourceTree = "<group>";
+		};
+		50E399092B47F395009D3E90 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				50E3990B2B47F3CB009D3E90 /* UnregisteredDevice.swift */,
+				50E3990D2B47F3D9009D3E90 /* UnregisteredDeviceView.swift */,
+				506A0C962B471F0F009C77A5 /* RegisterSheetView.swift */,
+				50E3990F2B47F3E6009D3E90 /* RegisterDeviceSheetView.swift */,
+				50E399112B480884009D3E90 /* RegisterStepHeaderView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		50E3990A2B47F39C009D3E90 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				506A0C1A2B46A117009C77A5 /* MainView.swift */,
+				506A0C8B2B470C95009C77A5 /* WelcomeView.swift */,
+				505D5BFB2B99D93E0006884F /* BackupListView.swift */,
+				50770BDD2B4E7F5D0056A3AB /* DeviceView.swift */,
+				501A47762BA448A800C6A431 /* DeviceReachableLabel.swift */,
+				505D5C022B9AE7520006884F /* OneTimeBackupView.swift */,
+				501A476D2BA40AE800C6A431 /* BackupTaskView.swift */,
+				501A476F2BA40CDB00C6A431 /* TaskListView.swift */,
+				501A477B2BA4576100C6A431 /* CreateBackupPlanView.swift */,
+				501A478B2BA4859300C6A431 /* BackupPlanView.swift */,
+				50B990802BA5D5390035BF05 /* BackupPlanTaskPreviewPanelView.swift */,
+				50B990842BA5E2BE0035BF05 /* BackupPlanTaskView.swift */,
+				501A47902BA4882700C6A431 /* SettingsView.swift */,
+				50C60CBA2BA5491100DA4B3D /* ManageAccountView.swift */,
+				50C60CC42BA56CC900DA4B3D /* StatusBarPopoverView.swift */,
+				50CA8EC42B5156A1001C12DD /* WelcomeColor.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		50AC92FC2A84DC95004E99BA /* BBackupp */ = {
+		506A0C142B46A117009C77A5 /* BBackupp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50AC930C2A84DC97004E99BA /* Build configuration list for PBXNativeTarget "BBackupp" */;
+			buildConfigurationList = 506A0C242B46A119009C77A5 /* Build configuration list for PBXNativeTarget "BBackupp" */;
 			buildPhases = (
-				50AC92F92A84DC95004E99BA /* Sources */,
-				50AC92FA2A84DC95004E99BA /* Frameworks */,
-				50AC92FB2A84DC95004E99BA /* Resources */,
+				5054D8072BA8405000A7182C /* Run Swift Format @ Release */,
+				506A0C112B46A117009C77A5 /* Sources */,
+				506A0C122B46A117009C77A5 /* Frameworks */,
+				506A0C132B46A117009C77A5 /* Resources */,
+				50C52C492BA307E800DDA49D /* Embed MobileBackup */,
+				501A477A2BA456BE00C6A431 /* Embed Restic */,
+				50C60CC12BA5622700DA4B3D /* Embed Pget */,
+				501A47812BA45AAE00C6A431 /* Scan License @ Release */,
+				50CA7B3A2BA842920012F487 /* Bump & Overwrite Version */,
 			);
 			buildRules = (
 			);
@@ -222,29 +510,37 @@
 			);
 			name = BBackupp;
 			packageProductDependencies = (
-				50AC93122A84DD35004E99BA /* AppleMobileDevice */,
-				5005A4832A8BAE5C00F4C351 /* ZipArchive */,
+				506A0C282B46A1AE009C77A5 /* AppleMobileDeviceLibrary */,
+				506A0C342B46A38D009C77A5 /* NIO */,
+				506A0C362B46A38D009C77A5 /* NIOConcurrencyHelpers */,
+				506A0C382B46A38D009C77A5 /* NIOCore */,
+				506A0C3A2B46A38D009C77A5 /* NIOEmbedded */,
+				506A0C3C2B46A38D009C77A5 /* NIOFoundationCompat */,
+				506A0C3F2B46A3B1009C77A5 /* AuxiliaryExecute */,
+				506A0C8E2B470CAA009C77A5 /* ColorfulX */,
+				50C60CB22BA536E000DA4B3D /* BetterCodable */,
+				50B9909F2BA623120035BF05 /* ApplePackage */,
 			);
 			productName = BBackupp;
-			productReference = 50AC92FD2A84DC95004E99BA /* BBackupp.app */;
+			productReference = 506A0C152B46A117009C77A5 /* BBackupp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		50AC92F52A84DC95004E99BA /* Project object */ = {
+		506A0C0D2B46A117009C77A5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					50AC92FC2A84DC95004E99BA = {
-						CreatedOnToolsVersion = 14.3.1;
+					506A0C142B46A117009C77A5 = {
+						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
-			buildConfigurationList = 50AC92F82A84DC95004E99BA /* Build configuration list for PBXProject "BBackupp" */;
+			buildConfigurationList = 506A0C102B46A117009C77A5 /* Build configuration list for PBXProject "BBackupp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -252,75 +548,244 @@
 				en,
 				Base,
 			);
-			mainGroup = 50AC92F42A84DC95004E99BA;
+			mainGroup = 506A0C0C2B46A117009C77A5;
 			packageReferences = (
-				5005A4822A8BAE5C00F4C351 /* XCRemoteSwiftPackageReference "ZipArchive" */,
+				506A0C272B46A1AE009C77A5 /* XCRemoteSwiftPackageReference "AppleMobileDeviceLibrary" */,
+				506A0C332B46A38D009C77A5 /* XCRemoteSwiftPackageReference "swift-nio" */,
+				506A0C3E2B46A3B1009C77A5 /* XCRemoteSwiftPackageReference "AuxiliaryExecute" */,
+				506A0C8D2B470CAA009C77A5 /* XCRemoteSwiftPackageReference "ColorfulX" */,
+				50C60CB12BA536E000DA4B3D /* XCRemoteSwiftPackageReference "BetterCodable" */,
 			);
-			productRefGroup = 50AC92FE2A84DC95004E99BA /* Products */;
+			productRefGroup = 506A0C162B46A117009C77A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50AC92FC2A84DC95004E99BA /* BBackupp */,
+				506A0C142B46A117009C77A5 /* BBackupp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		50AC92FB2A84DC95004E99BA /* Resources */ = {
+		506A0C132B46A117009C77A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50AC93052A84DC97004E99BA /* Assets.xcassets in Resources */,
-				50411FD82A8D0D03009D5CED /* License.txt in Resources */,
+				506A0C322B46A30D009C77A5 /* License.txt in Resources */,
+				50CA8ECB2B516934001C12DD /* License.resolved in Resources */,
+				506A0C1D2B46A119009C77A5 /* Assets.xcassets in Resources */,
+				50CA8EC52B5156A1001C12DD /* WelcomeColor.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		501A477A2BA456BE00C6A431 /* Embed Restic */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Restic";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./BBackupp/Resources/EmbedRestic.sh\n";
+		};
+		501A47812BA45AAE00C6A431 /* Scan License @ Release */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Scan License @ Release";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/zsh;
+			shellScript = "if [ \"$CONFIGURATION\" = \"Release\" ]; then\n    ./Resource/Script/scan.license.sh\nfi\n";
+		};
+		5054D8072BA8405000A7182C /* Run Swift Format @ Release */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swift Format @ Release";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$CONFIGURATION\" = \"Release\" ]; then\n    export PATH=$PATH:/opt/homebrew/bin/\n    swiftformat . --swiftversion 5.9\nfi\n";
+		};
+		50C52C492BA307E800DDA49D /* Embed MobileBackup */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Embed MobileBackup";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/zsh;
+			shellScript = "./BBackupp/Resources/EmbedMobileBackup.sh\n";
+		};
+		50C60CC12BA5622700DA4B3D /* Embed Pget */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pget";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./BBackupp/Resources/EmbedPget.sh\n";
+		};
+		50CA7B3A2BA842920012F487 /* Bump & Overwrite Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Bump & Overwrite Version";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Resource/Script/update.version.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		50AC92F92A84DC95004E99BA /* Sources */ = {
+		506A0C112B46A117009C77A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50FF93702A88F5A00031843C /* Result.swift in Sources */,
-				5031D1C92A8650020089B44F /* UnpairedDeviceView.swift in Sources */,
-				50AC93032A84DC95004E99BA /* MainView.swift in Sources */,
-				5031D1CF2A86796E0089B44F /* UITemplate.swift in Sources */,
-				50FF93762A89078F0031843C /* BackupSession.swift in Sources */,
-				50FF93612A87F52A0031843C /* BackupManager.swift in Sources */,
-				5031D1C72A864EAA0089B44F /* DeviceConfigurationView.swift in Sources */,
-				5031D1CD2A8679080089B44F /* PairInstructionView.swift in Sources */,
-				504558422A868DB9006A450C /* DeviceInfoSheet.swift in Sources */,
-				506810032A85732200367607 /* SettingView.swift in Sources */,
-				50FF93742A88FD280031843C /* NotificationSetupView.swift in Sources */,
-				504558442A869452006A450C /* BackupListView.swift in Sources */,
-				50FF936A2A88C3C40031843C /* WiredToggleView.swift in Sources */,
-				50FF93722A88F8C50031843C /* Constants.swift in Sources */,
-				50FF936C2A88C90E0031843C /* FileManager.swift in Sources */,
-				50680FF52A854A5A00367607 /* SidebarView.swift in Sources */,
-				50FF93782A890CF90031843C /* Backup.swift in Sources */,
-				5031BFED2A8FBED100724DA6 /* ModalSheet.swift in Sources */,
-				50680FF32A8548E800367607 /* WelcomeView.swift in Sources */,
-				50FF936E2A88D6F70031843C /* String.swift in Sources */,
-				504558462A869458006A450C /* BackupProgressListView.swift in Sources */,
-				5005A4812A8BACB900F4C351 /* CryptoKit.swift in Sources */,
-				50680FFD2A85540800367607 /* PublishedStorage.swift in Sources */,
-				50680FFF2A8555FA00367607 /* Device.swift in Sources */,
-				50AC93012A84DC95004E99BA /* BBackuppApp.swift in Sources */,
-				50680FFA2A85537C00367607 /* DeviceManager.swift in Sources */,
-				50FF93632A87F69C0031843C /* AppDelegate.swift in Sources */,
-				50FF935D2A87E6880031843C /* NSImage.swift in Sources */,
-				5005A4862A8BDAE100F4C351 /* Date.swift in Sources */,
-				5031D1C52A864A890089B44F /* Configuration.swift in Sources */,
-				50FF93662A87F8970031843C /* StatusBarPopoverView.swift in Sources */,
-				50FF93682A87F8D80031843C /* EventMonitor.swift in Sources */,
+				506A0C792B470984009C77A5 /* AnyDecodable.swift in Sources */,
+				50E399102B47F3E6009D3E90 /* RegisterDeviceSheetView.swift in Sources */,
+				501A47882BA482B900C6A431 /* ProgressPanelView.swift in Sources */,
+				501A478C2BA4859300C6A431 /* BackupPlanView.swift in Sources */,
+				506A0C6D2B470588009C77A5 /* Result.swift in Sources */,
+				50770BDE2B4E7F5D0056A3AB /* DeviceView.swift in Sources */,
+				501A478F2BA487CF00C6A431 /* AppSetting.swift in Sources */,
+				501A47802BA4587400C6A431 /* BackupPlan.swift in Sources */,
+				506A0C8A2B4709B1009C77A5 /* AMDUtils.swift in Sources */,
+				506A0C6C2B470588009C77A5 /* FileManager.swift in Sources */,
+				506A0C1B2B46A117009C77A5 /* MainView.swift in Sources */,
+				506A0C4D2B46ABC6009C77A5 /* MuxRequestPreProcess.swift in Sources */,
+				506A0C882B4709B1009C77A5 /* AMDManager.swift in Sources */,
+				50C60CB52BA53AF400DA4B3D /* BarkNotificationSetupPanelView.swift in Sources */,
+				5096BCB92B4835AD00F16F4C /* PairRecord.swift in Sources */,
+				506A0C8C2B470C95009C77A5 /* WelcomeView.swift in Sources */,
+				50B990872BA6068A0035BF05 /* AMDManager+Apps.swift in Sources */,
+				50B9908B2BA61BE40035BF05 /* MacAddress.swift in Sources */,
+				501A477E2BA4582100C6A431 /* ResticTask.swift in Sources */,
+				502304C62B483D2B00C8314A /* MessageBoxView.swift in Sources */,
+				50B990892BA611CE0035BF05 /* DownloadSeed.swift in Sources */,
+				506A0C972B471F0F009C77A5 /* RegisterSheetView.swift in Sources */,
+				506A0C522B46F01F009C77A5 /* MuxRequestHandler.swift in Sources */,
+				505D5BF42B99AA780006884F /* Data.swift in Sources */,
+				50CA8EC32B512AD8001C12DD /* SymbolPickerPanelView.swift in Sources */,
+				501A477C2BA4576100C6A431 /* CreateBackupPlanView.swift in Sources */,
+				501A478A2BA4838500C6A431 /* Alert.swift in Sources */,
+				50E399122B480884009D3E90 /* RegisterStepHeaderView.swift in Sources */,
+				505D5BFA2B99BE670006884F /* InputSheetView.swift in Sources */,
+				50C60CC32BA5680200DA4B3D /* DecodeSize.swift in Sources */,
+				505D5C032B9AE7520006884F /* OneTimeBackupView.swift in Sources */,
+				506A0C7B2B470984009C77A5 /* AnyEncodable.swift in Sources */,
+				506A0C192B46A117009C77A5 /* BBackupp.swift in Sources */,
+				506A0C462B46A6B3009C77A5 /* AppDelegate.swift in Sources */,
+				501A47912BA4882700C6A431 /* SettingsView.swift in Sources */,
+				506A0C7A2B470984009C77A5 /* AnyCodable.swift in Sources */,
+				506A0C892B4709B1009C77A5 /* AMDManager+Pair.swift in Sources */,
+				506A0C862B4709B1009C77A5 /* AMDManager+DeviceInfo.swift in Sources */,
+				50CA8EC72B515795001C12DD /* Color.swift in Sources */,
+				509FA5B92B99A5750096C2DB /* ExportPairRecordView.swift in Sources */,
+				501A47772BA448A800C6A431 /* DeviceReachableLabel.swift in Sources */,
+				501A47842BA46BB300C6A431 /* ResticRepo.swift in Sources */,
+				506A0C2F2B46A2E2009C77A5 /* Constants.swift in Sources */,
+				506A0C912B470F6A009C77A5 /* Setup.swift in Sources */,
+				501A47932BA5310900C6A431 /* String.swift in Sources */,
+				50C60CB92BA53E0000DA4B3D /* TelegramNotificationSetupPanelView.swift in Sources */,
+				506A0C492B46A896009C77A5 /* MuxRequest.swift in Sources */,
+				50B990A22BA62EE80035BF05 /* ResticBackup.swift in Sources */,
+				50770BE12B4E801F0056A3AB /* BackupManager.swift in Sources */,
+				501A47862BA46C7100C6A431 /* Restic.swift in Sources */,
+				50C60CB72BA53B9F00DA4B3D /* SectionBuilder.swift in Sources */,
+				50C60CC72BA56EEA00DA4B3D /* BackupPlanTask.swift in Sources */,
+				50770BD52B4E5FAD0056A3AB /* SheetPanelView.swift in Sources */,
+				506A0C872B4709B1009C77A5 /* AMDManager+Connection.swift in Sources */,
+				503E8F0B2BA5A68D00761C73 /* Codable.swift in Sources */,
+				505D5C052B9AEB8B0006884F /* BackupTask.swift in Sources */,
+				50E3990C2B47F3CB009D3E90 /* UnregisteredDevice.swift in Sources */,
+				505D5BFC2B99D93E0006884F /* BackupListView.swift in Sources */,
+				506A0C582B46FDB7009C77A5 /* UpstreamResponsePreProcess.swift in Sources */,
+				506A0C562B46FDA6009C77A5 /* UpstreamResponseHandler.swift in Sources */,
+				50E3990E2B47F3D9009D3E90 /* UnregisteredDeviceView.swift in Sources */,
+				506A0C692B470588009C77A5 /* Date.swift in Sources */,
+				506A0C542B46FBCF009C77A5 /* MuxResponse.swift in Sources */,
+				50770BD32B4E5F870056A3AB /* WirelessConfigurationView.swift in Sources */,
+				50C60CC52BA56CC900DA4B3D /* StatusBarPopoverView.swift in Sources */,
+				506A0C4B2B46A8B7009C77A5 /* MuxProxy.swift in Sources */,
+				50B990832BA5D7A10035BF05 /* BackupPlanTaskItemView.swift in Sources */,
+				50B990852BA5E2BE0035BF05 /* BackupPlanTaskView.swift in Sources */,
+				50770BDC2B4E7A7A0056A3AB /* BackupEncryptionConfigurationView.swift in Sources */,
+				501A476E2BA40AE800C6A431 /* BackupTaskView.swift in Sources */,
+				506A0C5B2B47034B009C77A5 /* Devices.swift in Sources */,
+				501A47702BA40CDB00C6A431 /* TaskListView.swift in Sources */,
+				50C60CBE2BA54E5C00DA4B3D /* AppStoreBackend.swift in Sources */,
+				50C60CBB2BA5491100DA4B3D /* ManageAccountView.swift in Sources */,
+				506A0C712B470588009C77A5 /* PublishedStorage.swift in Sources */,
+				505D5BF62B99AC6C0006884F /* SavePanel.swift in Sources */,
+				50B990812BA5D5390035BF05 /* BackupPlanTaskPreviewPanelView.swift in Sources */,
+				506A0C6E2B470588009C77A5 /* NSImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		50AC930A2A84DC97004E99BA /* Debug */ = {
+		506A0C222B46A119009C77A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -359,7 +824,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -373,17 +838,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		50AC930B2A84DC97004E99BA /* Release */ = {
+		506A0C232B46A119009C77A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -422,7 +888,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -430,29 +896,30 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		50AC930D2A84DC97004E99BA /* Debug */ = {
+		506A0C252B46A119009C77A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BBackupp/BBackupp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 6CMYQQFFT8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BBackupp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BBackupp;
@@ -463,7 +930,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.BBackupp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -471,20 +939,21 @@
 			};
 			name = Debug;
 		};
-		50AC930E2A84DC97004E99BA /* Release */ = {
+		506A0C262B46A119009C77A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BBackupp/BBackupp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 6CMYQQFFT8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BBackupp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BBackupp;
@@ -495,7 +964,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.BBackupp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -506,20 +976,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50AC92F82A84DC95004E99BA /* Build configuration list for PBXProject "BBackupp" */ = {
+		506A0C102B46A117009C77A5 /* Build configuration list for PBXProject "BBackupp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50AC930A2A84DC97004E99BA /* Debug */,
-				50AC930B2A84DC97004E99BA /* Release */,
+				506A0C222B46A119009C77A5 /* Debug */,
+				506A0C232B46A119009C77A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50AC930C2A84DC97004E99BA /* Build configuration list for PBXNativeTarget "BBackupp" */ = {
+		506A0C242B46A119009C77A5 /* Build configuration list for PBXNativeTarget "BBackupp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50AC930D2A84DC97004E99BA /* Debug */,
-				50AC930E2A84DC97004E99BA /* Release */,
+				506A0C252B46A119009C77A5 /* Debug */,
+				506A0C262B46A119009C77A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -527,27 +997,99 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5005A4822A8BAE5C00F4C351 /* XCRemoteSwiftPackageReference "ZipArchive" */ = {
+		506A0C272B46A1AE009C77A5 /* XCRemoteSwiftPackageReference "AppleMobileDeviceLibrary" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ZipArchive/ZipArchive";
+			repositoryURL = "https://github.com/Lakr233/AppleMobileDeviceLibrary/";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.5.4;
+				minimumVersion = 1.0.0;
+			};
+		};
+		506A0C332B46A38D009C77A5 /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.62.0;
+			};
+		};
+		506A0C3E2B46A3B1009C77A5 /* XCRemoteSwiftPackageReference "AuxiliaryExecute" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/AuxiliaryExecute";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		506A0C8D2B470CAA009C77A5 /* XCRemoteSwiftPackageReference "ColorfulX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/ColorfulX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.15;
+			};
+		};
+		50C60CB12BA536E000DA4B3D /* XCRemoteSwiftPackageReference "BetterCodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marksands/BetterCodable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5005A4832A8BAE5C00F4C351 /* ZipArchive */ = {
+		506A0C282B46A1AE009C77A5 /* AppleMobileDeviceLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5005A4822A8BAE5C00F4C351 /* XCRemoteSwiftPackageReference "ZipArchive" */;
-			productName = ZipArchive;
+			package = 506A0C272B46A1AE009C77A5 /* XCRemoteSwiftPackageReference "AppleMobileDeviceLibrary" */;
+			productName = AppleMobileDeviceLibrary;
 		};
-		50AC93122A84DD35004E99BA /* AppleMobileDevice */ = {
+		506A0C342B46A38D009C77A5 /* NIO */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AppleMobileDevice;
+			package = 506A0C332B46A38D009C77A5 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIO;
+		};
+		506A0C362B46A38D009C77A5 /* NIOConcurrencyHelpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 506A0C332B46A38D009C77A5 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOConcurrencyHelpers;
+		};
+		506A0C382B46A38D009C77A5 /* NIOCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 506A0C332B46A38D009C77A5 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOCore;
+		};
+		506A0C3A2B46A38D009C77A5 /* NIOEmbedded */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 506A0C332B46A38D009C77A5 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOEmbedded;
+		};
+		506A0C3C2B46A38D009C77A5 /* NIOFoundationCompat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 506A0C332B46A38D009C77A5 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOFoundationCompat;
+		};
+		506A0C3F2B46A3B1009C77A5 /* AuxiliaryExecute */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 506A0C3E2B46A3B1009C77A5 /* XCRemoteSwiftPackageReference "AuxiliaryExecute" */;
+			productName = AuxiliaryExecute;
+		};
+		506A0C8E2B470CAA009C77A5 /* ColorfulX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 506A0C8D2B470CAA009C77A5 /* XCRemoteSwiftPackageReference "ColorfulX" */;
+			productName = ColorfulX;
+		};
+		50B9909F2BA623120035BF05 /* ApplePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ApplePackage;
+		};
+		50C60CB22BA536E000DA4B3D /* BetterCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50C60CB12BA536E000DA4B3D /* XCRemoteSwiftPackageReference "BetterCodable" */;
+			productName = BetterCodable;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 50AC92F52A84DC95004E99BA /* Project object */;
+	rootObject = 506A0C0D2B46A117009C77A5 /* Project object */;
 }

@@ -1,65 +1,95 @@
 # BBackupp
 
-Backup iOS devices the way it should be. Sandboxed single binary for all your stuff with automation support.
+Back up your iOS devices the way it's meant to be done.
 
-![Demo](./Resource/Demo/Main.png)
+![BBackupp Screenshot](Resource/Readme/SCR-20240322-khfv.jpeg)
 
 ## Features
 
-- [x] Backup iOS/iPad/visionOS(maybe) devices
-- [x] Backup encryption
-- [x] Backup compression
-- [x] Backup to external drive
-- [x] Backup to network drive
-- [x] Wireless backup (after initial setup)
-- [x] Unpack backup to iTunes/Finder for restore
-- [x] Automatic backup when device is connected
-- [x] Automatic backup when device is connected to power
-- [x] Backup notifications (needs setup with provider)
+- [x] Effortlessly back up iOS devices.
+- [x] Monitor backup progress for each file.
+- [x] Perform one-time backups to local storage.
+- [x] **Enable wireless backups with IP address support.**
+- [x] **Seamless setup with Transferable Pair Record.**
+- [x] Secure your backups with encryption.
+- [x] Automate your backup schedule.
+- [x] **Automatically download app installers from the App Store.**
+- [x] Utilize snapshot technology for storing backups.
+- [x] **Support for storing backups locally, via SFTP, S3, and more.**
+- [x] Receive notifications throughout the backup process.
+- [x] Includes a simple alive checker via GET request.
+
+## Partial Open Source Notice
+
+Starting from version 2.0, certain components are not included in the open-source repository:
+
+- Code interfacing with the App Store API.
+- User interface components.
+- MuxProxy related code.
+- Assets.xcassets
+
+To build your own BBackupp, you'll need to develop a custom user interface and exclude the features listed above.
+
+## MuxProxy
+
+MuxProxy facilitates device discovery in environments where mDNS may not be available, allowing for the use of TailScale or ZeroTier.
+
+![MuxProxy Example](Resource/Readme/SCR-20240322-kihu.png)
+
+For integrating your toolchain with `libusbmuxd` and MuxProxy, launch BBackupp and locate the `Copy Terminal Environment` button under the Muxd menu.
+
+![MuxProxy Menu](Resource/Readme/SCR-20240322-hbbb.png)
+
+## Transferable Pair Record
+
+Support for transferable pair records allows you to set up a device on one computer and then export the record for use on another machine.
+
+**Note: Not all pair records are compatible with this feature.**
+
+We recommend backing up your device using a wired connection at least once before exporting the record.
+
+> Technical note: The EscowBag (device backup key) is transferred to the host (in this case, your Mac) at an unspecified time. If your pair record already contains this key, it should function correctly.
+
+To register a device without connecting to it directly, navigate to `Import Pair Record` in the `Muxd` menu. Enter an IP address and verify its accessibility.
 
 ## Notifications
 
-While you wait for the backup, we will send you notifications at beginning and end of the backup process. We will also send you a notification if the backup failed.
+During the backup process, we'll send notifications at the start and end, as well as if the backup fails.
 
-![Demo of notifications](./Resource/Demo/Notification.jpeg)
+![Notification Setup Page Demo](Resource/Readme/SCR-20240322-khof.jpeg)
 
-Currently we support the following notification providers:
+We currently support the following notification providers:
 
 - [x] Bark (https://github.com/Finb/Bark)
-
-## Restore
-
-The default unpack location at "Backups" tab is the system storage for mobile backups. Click Save and use Finder to restore to your device.
-
-![Restore Demo](./Resource/Demo/Restore.jpg)
+- [x] Telegram Bot (https://t.me/BotFather)
 
 ## License
 
 GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 
-See [License](./LICENSE) for details. May change over time.
+Refer to [License](./LICENSE) for more details. Subject to change.
 
 ## Disclaimer
 
-We are not responsible for any consequences resulting from the use of this program. Below, we list some potential occurrences for your awareness.
+We are not liable for any consequences arising from the use of this software. Potential issues include, but are not limited to:
 
-- App crashes.
-- None-working backups.
+- Application crashes.
+- Backups failing to work.
 - Computer crashes, freezes, or restarts.
-- Computer chip damage.
-- Screen glitches, white screens, black screens, flashing screens.
-- Arriving late to work.
-- Being scolded by your wife or daughter for something you wrote.
-- Getting caught by your boss while slacking off.
-- Facing dismissal from your job.
-- Handling of leaked confidential information by the security department.
-- Unfortunate events.
-- Transforming into a cat.
-- Earth exploding.
-- Universe rebooting.
-- Anything else that you can think of.
+- Damage to computer components.
+- Screen glitches, including white, black, or flashing screens.
+- Being late for work.
+- Reprimands from family members.
+- Being caught by your boss while not working.
+- Risk of job termination.
+- Legal issues related to leaked confidential information.
+- Unforeseen mishaps.
+- Turning into a cat.
+- Cat scratches.
+- The Earth exploding.
+- A reboot of the universe.
+- Any other imaginable scenario.
 
 ---
 
-Copyright © 2023 Lakr Aream. All Rights Reserved.
-
+Copyright © 2024 Lakr Aream. All Rights Reserved.

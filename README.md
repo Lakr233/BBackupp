@@ -2,6 +2,8 @@
 
 Back up your iOS devices the way it's meant to be done.
 
+**2.0 is not released yet**
+
 ![BBackupp Screenshot](Resource/Readme/SCR-20240322-khfv.jpeg)
 
 ## Features

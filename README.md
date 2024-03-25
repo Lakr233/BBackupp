@@ -40,6 +40,10 @@ For integrating your toolchain with `libusbmuxd` and MuxProxy, launch BBackupp a
 
 ![MuxProxy Menu](Resource/Readme/SCR-20240322-hbbb.png)
 
+If you're considering using a tunnel to connect your device, we strongly recommend a high-speed internet connection. Without it, completing a backup in a timely manner might not be feasible. Please note that we are not responsible for resolving networking issues you may encounter. With the standard Tailscale configuration, transferring device information takes approximately 15 seconds. Optimizing this setup is entirely up to you.
+
+![Connect via Tailscale](Resource/Readme/SCR-20240325-jero.png)
+
 ## Transferable Pair Record
 
 Support for transferable pair records allows you to set up a device on one computer and then export the record for use on another machine.

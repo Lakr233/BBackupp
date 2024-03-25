@@ -701,7 +701,7 @@ extension BackupPlanTask.TaskItem {
                     byteFmt.countStyle = .file
                     let total = byteFmt.string(fromByteCount: progress.totalUnitCount)
                     let completed = byteFmt.string(fromByteCount: progress.completedUnitCount)
-                    self.updateOnMain { self.message = "\(request.bundleIdentifier) \(total) \(completed) \(value)" }
+                    self.updateOnMain { self.message = "\(request.bundleIdentifier) \(total) \(completed) \(value)%" }
                 }
                 executingTask = seed
                 defer { executingTask = nil }

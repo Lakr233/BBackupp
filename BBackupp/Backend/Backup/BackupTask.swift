@@ -85,12 +85,11 @@ class BackupTask: ObservableObject, Identifiable {
         case initialized
         case executing
         case completed
-        case terminated
     }
 
     @Published var status: BackupStatus = .initialized
     var executing: Bool { status == .executing || pid != nil }
-    var completed: Bool { [.completed, .terminated].contains(status) }
+    var completed: Bool { [.completed].contains(status) }
     var success: Bool { error == nil }
 
     @Published var pid: pid_t? = nil
@@ -151,9 +150,7 @@ class BackupTask: ObservableObject, Identifiable {
                     self.overall.totalUnitCount = 100
                     self.overall.completedUnitCount = 100
                 }
-                if self.recp == nil {
-                    self.status = .terminated
-                }
+                self.status = .completed
             }
             try? logFile?.close()
         }
@@ -223,11 +220,7 @@ class BackupTask: ObservableObject, Identifiable {
         overall.totalUnitCount = 100
         overall.completedUnitCount = 100
         self.recp = recp
-        if recp.exitCode == 0 {
-            status = .completed
-            return
-        }
-        status = .terminated
+        status = .completed
         if error == nil { error = .unexpectedExitCode }
     }
 

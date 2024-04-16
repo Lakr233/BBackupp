@@ -495,13 +495,13 @@
 			buildConfigurationList = 506A0C242B46A119009C77A5 /* Build configuration list for PBXNativeTarget "BBackupp" */;
 			buildPhases = (
 				5054D8072BA8405000A7182C /* Run Swift Format @ Release */,
-				506A0C112B46A117009C77A5 /* Sources */,
-				506A0C122B46A117009C77A5 /* Frameworks */,
-				506A0C132B46A117009C77A5 /* Resources */,
 				50C52C492BA307E800DDA49D /* Embed MobileBackup */,
+				506A0C112B46A117009C77A5 /* Sources */,
 				501A477A2BA456BE00C6A431 /* Embed Restic */,
 				50C60CC12BA5622700DA4B3D /* Embed Pget */,
+				506A0C122B46A117009C77A5 /* Frameworks */,
 				501A47812BA45AAE00C6A431 /* Scan License @ Release */,
+				506A0C132B46A117009C77A5 /* Resources */,
 				50CA7B3A2BA842920012F487 /* Bump & Overwrite Version */,
 			);
 			buildRules = (

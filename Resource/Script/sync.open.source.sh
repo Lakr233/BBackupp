@@ -43,10 +43,10 @@ COMMIT_HASH=$(git rev-parse --short HEAD)
 pushd $TARGET_DIR
 
 PROHIBIT_FILE_LIST=(
-    "BBackupp/Interface"
-    "BBackupp/Backend/MuxProxy"
-    "BBackupp/Library/ApplePackage"
-    "BBackupp/Resources/Assets.xcassets"
+    # "BBackupp/Interface"
+    # "BBackupp/Backend/MuxProxy"
+    # "BBackupp/Library/ApplePackage"
+    # "BBackupp/Resources/Assets.xcassets"
     "MobileBackup/libimobiledevice"
 )
 

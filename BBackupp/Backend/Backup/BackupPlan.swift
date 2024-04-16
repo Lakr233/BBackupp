@@ -92,6 +92,7 @@ class BackupPlan: ObservableObject, Codable, CopyableCodable, Identifiable {
         struct BinaryExecutor: Codable, Identifiable {
             var id: UUID = .init()
             var name: String = ""
+            var path: String = ""
             var enabled: Bool = false
         }
 

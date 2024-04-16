@@ -2,8 +2,6 @@
 
 Back up your iOS devices the way it's meant to be done.
 
-**2.0 is not released yet**
-
 ![BBackupp Screenshot](Resource/Readme/SCR-20240322-khfv.jpeg)
 
 ## Features
@@ -21,16 +19,22 @@ Back up your iOS devices the way it's meant to be done.
 - [x] Receive notifications throughout the backup process.
 - [x] Includes a simple alive checker via GET request.
 
-## Partial Open Source Notice
+## ~~Partial Open Source Notice~~
 
-Starting from version 2.0, certain components are not included in the open-source repository:
+~~Starting from version 2.0, certain components are not included in the open-source repository:~~
 
-- Code interfacing with the App Store API.
-- User interface components.
-- MuxProxy related code.
-- Assets.xcassets
+- ~~Code interfacing with the App Store API.~~
+- ~~User interface components.~~
+- ~~MuxProxy related code.~~
+- ~~Assets.xcassets~~
 
-To build your own BBackupp, you'll need to develop a custom user interface and exclude the features listed above.
+~~To build your own BBackupp, you'll need to develop a custom user interface and exclude the features listed above.~~
+
+BBackupp v2.0 is now fully open-source. You can build your own version with the included source code. Please refer to the [License](./LICENSE) for more information.
+
+**I am unable to provide ongoing maintenance for this code due to time constraints. Therefore I made the decision to open-source it.**
+
+**It is unlikely that I will be able to provide support or update the code in the future.**
 
 ## MuxProxy
 

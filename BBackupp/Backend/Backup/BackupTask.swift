@@ -221,7 +221,9 @@ class BackupTask: ObservableObject, Identifiable {
         overall.completedUnitCount = 100
         self.recp = recp
         status = .completed
-        if error == nil { error = .unexpectedExitCode }
+        if recp.exitCode != 0, error == nil {
+            error = .unexpectedExitCode
+        }
     }
 
     private var buffer = ""

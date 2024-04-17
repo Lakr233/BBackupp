@@ -19,6 +19,8 @@ Back up your iOS devices the way it's meant to be done.
 - [x] Receive notifications throughout the backup process.
 - [x] Includes a simple alive checker via GET request.
 
+If this app helps you out, consider a [donate](https://github.com/sponsors/Lakr233).
+
 ## ~~Partial Open Source Notice~~
 
 ~~Starting from version 2.0, certain components are not included in the open-source repository:~~

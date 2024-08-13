@@ -155,24 +155,6 @@ class BackupTask: ObservableObject, Identifiable {
             try? logFile?.close()
         }
 
-        if config.useNetwork {
-            decodeOutput("waking up device...\n")
-            let retryCount = 20
-            for i in 1 ... retryCount {
-                if error != nil { return }
-                if wakeupDevice() {
-                    decodeOutput("device is ready.\n")
-                    break
-                }
-                if i >= retryCount {
-                    decodeOutput("warning: service may not available.\n")
-                } else {
-                    decodeOutput("warning: service not available, retry in 3s. (\(i)/\(retryCount))\n")
-                    sleep(3)
-                }
-            }
-        }
-
         decodeOutput("starting command...\n")
         let recp = AuxiliaryExecute.spawn(
             command: Self.mobileBackupExecutable,
@@ -190,28 +172,6 @@ class BackupTask: ObservableObject, Identifiable {
         withMainActor {
             self.decodeReceipt(recp)
         }
-    }
-
-    // MARK: HELPER
-
-    private func wakeupDevice() -> Bool {
-        var success = false
-        amdManager.sendPairRequest(udid: config.device.udid)
-        amdManager.requireDevice(udid: config.device.udid, connection: config.useNetwork ? .net : .usb) { device in
-            guard let device else { return }
-            amdManager.requireLockdownClient(device: device, handshake: true) { client in
-                guard let client else { return }
-                amdManager.requireLockdownService(client: client, serviceName: MOBILEBACKUP2_SERVICE_NAME) { mb2_service in
-                    guard let mb2_service else { return }
-                    amdManager.requireMobileBackup2Service(device: device, mobileBackup2Service: mb2_service) { mb2_client in
-                        guard let mb2_client else { return }
-                        _ = mb2_client
-                        success = true
-                    }
-                }
-            }
-        }
-        return success
     }
 
     // MARK: OUTPUT HANDLER

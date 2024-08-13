@@ -158,7 +158,6 @@ extension BackupPlan.Automation.BackupKeepOption {
     var interfaceText: String {
         switch self {
         case .unlimited: "Keep Unlimited Backups"
-
         case .n1: "Keep 1 Backups"
         case .n2: "Keep 2 Backups"
         case .n3: "Keep 3 Backups"
@@ -166,7 +165,6 @@ extension BackupPlan.Automation.BackupKeepOption {
         case .n5: "Keep 5 Backups"
         case .n6: "Keep 6 Backups"
         case .n7: "Keep 7 Backups"
-
         case .d3: "Keep All within 3 Days"
         case .d7: "Keep All within 7 Days"
         case .d30: "Keep All within 30 Days"
@@ -186,7 +184,6 @@ extension BackupPlan.Automation.BackupKeepOption {
 
         switch self {
         case .unlimited: break
-
         case .n1: saveFirst(1)
         case .n2: saveFirst(2)
         case .n3: saveFirst(3)
@@ -194,7 +191,6 @@ extension BackupPlan.Automation.BackupKeepOption {
         case .n5: saveFirst(5)
         case .n6: saveFirst(6)
         case .n7: saveFirst(7)
-
         case .d3: saveList = saveList.filter { abs($0.date.timeIntervalSinceNow) < 3 * 24 * 3600 }
         case .d7: saveList = saveList.filter { abs($0.date.timeIntervalSinceNow) < 7 * 24 * 3600 }
         case .d30: saveList = saveList.filter { abs($0.date.timeIntervalSinceNow) < 30 * 24 * 3600 }

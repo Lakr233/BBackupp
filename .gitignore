@@ -319,3 +319,11 @@ cython_debug/
 
 .DS_Store
 
+.//BBackupp/Resources/AuxiliaryBinary/*
+BBackupp/Resources/AuxiliaryBinary/*
+
+*.xcarchive
+.cache/
+Package.resolved
+
+MobileBackup/libimobiledevice

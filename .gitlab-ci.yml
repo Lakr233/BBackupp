@@ -1,0 +1,19 @@
+image: ghcr.io/cirruslabs/macos-sonoma-xcode:15.3
+
+variables:
+  HOMEBREW_NO_AUTO_UPDATE: 1
+  CI_SKIP_BUMP_VERSION: 1
+
+stages:
+  - CompileRelease
+
+CompileRelease:
+  tags:
+    - xcode
+  stage: CompileRelease
+  script:
+    - brew install xcbeautify swiftformat
+    - ./Resource/Script/build.release.sh $(pwd)/BBackupp.xcarchive
+  artifacts:
+    paths:
+      - BBackupp.xcarchive

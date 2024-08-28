@@ -11,6 +11,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/Lakr233/AppleMobileDeviceLibrary", .upToNextMajor(from: .init(1, 0, 0))),
+        .package(url: "https://github.com/Lakr233/openssl-spm", from: "3.2.0"),
     ],
     targets: [
         .executableTarget(
@@ -18,6 +19,7 @@ let package = Package(
             dependencies: [
                 "MobileBackupEndianness",
                 "AppleMobileDeviceLibrary",
+                .product(name: "OpenSSL", package: "openssl-spm"),
             ],
             cSettings: [
                 .unsafeFlags(["-w"]),

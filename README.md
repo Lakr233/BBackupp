@@ -4,6 +4,10 @@ Back up your iOS devices the way it's meant to be done.
 
 ![BBackupp Screenshot](Resource/Readme/SCR-20240322-khfv.jpeg)
 
+## Statement
+
+Although this software meets my personal needs, I have to say it’s pretty bad for most users. Additionally, it doesn’t support recovery, you’ll have to use Finder or the command line to recover. You might want to wait for my new software.​
+
 ## Features
 
 - [x] Effortlessly back up iOS devices.

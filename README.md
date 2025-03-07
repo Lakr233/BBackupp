@@ -25,6 +25,8 @@ Although this software meets my personal needs, I have to say it’s pretty bad 
 
 If this app helps you out, consider a [donate](https://github.com/sponsors/Lakr233).
 
+To restore you device, see [MobileTransfer](https://github.com/Lakr233/MobileTransfer)
+
 ## Installation Guide
 
 ### Homebrew

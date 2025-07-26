@@ -18,6 +18,7 @@ struct WelcomeView: View {
             content
         }
         .padding()
+        .hideToolbarBackground()
         .background(background.ignoresSafeArea())
         .toolbar {
             ToolbarItem {

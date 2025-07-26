@@ -99,6 +99,8 @@
 		50E3990E2B47F3D9009D3E90 /* UnregisteredDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3990D2B47F3D9009D3E90 /* UnregisteredDeviceView.swift */; };
 		50E399102B47F3E6009D3E90 /* RegisterDeviceSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3990F2B47F3E6009D3E90 /* RegisterDeviceSheetView.swift */; };
 		50E399122B480884009D3E90 /* RegisterStepHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E399112B480884009D3E90 /* RegisterStepHeaderView.swift */; };
+		8164C36C2E34AEE90028DA83 /* ToolbarSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164C36B2E34AEE30028DA83 /* ToolbarSpacer.swift */; };
+		8164C36E2E34B8180028DA83 /* ToolbarBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164C36D2E34B8170028DA83 /* ToolbarBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +194,8 @@
 		50E3990D2B47F3D9009D3E90 /* UnregisteredDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnregisteredDeviceView.swift; sourceTree = "<group>"; };
 		50E3990F2B47F3E6009D3E90 /* RegisterDeviceSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDeviceSheetView.swift; sourceTree = "<group>"; };
 		50E399112B480884009D3E90 /* RegisterStepHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterStepHeaderView.swift; sourceTree = "<group>"; };
+		8164C36B2E34AEE30028DA83 /* ToolbarSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarSpacer.swift; sourceTree = "<group>"; };
+		8164C36D2E34B8170028DA83 /* ToolbarBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +373,7 @@
 				501A47892BA4838500C6A431 /* Alert.swift */,
 				505D5BF52B99AC6C0006884F /* SavePanel.swift */,
 				50C60CC22BA5680200DA4B3D /* DecodeSize.swift */,
+				8164C36D2E34B8170028DA83 /* ToolbarBackground.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				505D5BF92B99BE670006884F /* InputSheetView.swift */,
 				50C60CB62BA53B9F00DA4B3D /* SectionBuilder.swift */,
 				50B990822BA5D7A10035BF05 /* BackupPlanTaskItemView.swift */,
+				8164C36B2E34AEE30028DA83 /* ToolbarSpacer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -706,6 +712,7 @@
 				501A47882BA482B900C6A431 /* ProgressPanelView.swift in Sources */,
 				501A478C2BA4859300C6A431 /* BackupPlanView.swift in Sources */,
 				506A0C6D2B470588009C77A5 /* Result.swift in Sources */,
+				8164C36E2E34B8180028DA83 /* ToolbarBackground.swift in Sources */,
 				50770BDE2B4E7F5D0056A3AB /* DeviceView.swift in Sources */,
 				501A478F2BA487CF00C6A431 /* AppSetting.swift in Sources */,
 				501A47802BA4587400C6A431 /* BackupPlan.swift in Sources */,
@@ -720,6 +727,7 @@
 				50B990872BA6068A0035BF05 /* AMDManager+Apps.swift in Sources */,
 				50B9908B2BA61BE40035BF05 /* MacAddress.swift in Sources */,
 				501A477E2BA4582100C6A431 /* ResticTask.swift in Sources */,
+				8164C36C2E34AEE90028DA83 /* ToolbarSpacer.swift in Sources */,
 				502304C62B483D2B00C8314A /* MessageBoxView.swift in Sources */,
 				50B990892BA611CE0035BF05 /* DownloadSeed.swift in Sources */,
 				506A0C972B471F0F009C77A5 /* RegisterSheetView.swift in Sources */,

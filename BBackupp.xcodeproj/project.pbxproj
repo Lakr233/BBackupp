@@ -641,7 +641,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" = \"Release\" ]; then\n    export PATH=$PATH:/opt/homebrew/bin/\n brew install swiftformat && swiftformat . --swiftversion 5.9\nfi\n";
+			shellScript = "if [ \"$CONFIGURATION\" = \"Release\" ]; then\n    export PATH=$PATH:/opt/homebrew/bin/\n    swiftformat . --swiftversion 6.0\nfi\n";
 		};
 		50C52C492BA307E800DDA49D /* Embed MobileBackup */ = {
 			isa = PBXShellScriptBuildPhase;

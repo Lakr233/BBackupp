@@ -99,6 +99,7 @@
 		50E3990E2B47F3D9009D3E90 /* UnregisteredDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3990D2B47F3D9009D3E90 /* UnregisteredDeviceView.swift */; };
 		50E399102B47F3E6009D3E90 /* RegisterDeviceSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3990F2B47F3E6009D3E90 /* RegisterDeviceSheetView.swift */; };
 		50E399122B480884009D3E90 /* RegisterStepHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E399112B480884009D3E90 /* RegisterStepHeaderView.swift */; };
+		8164C36C2E34AEE90028DA83 /* ToolbarSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164C36B2E34AEE30028DA83 /* ToolbarSpacer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +193,7 @@
 		50E3990D2B47F3D9009D3E90 /* UnregisteredDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnregisteredDeviceView.swift; sourceTree = "<group>"; };
 		50E3990F2B47F3E6009D3E90 /* RegisterDeviceSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDeviceSheetView.swift; sourceTree = "<group>"; };
 		50E399112B480884009D3E90 /* RegisterStepHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterStepHeaderView.swift; sourceTree = "<group>"; };
+		8164C36B2E34AEE30028DA83 /* ToolbarSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarSpacer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +408,7 @@
 				505D5BF92B99BE670006884F /* InputSheetView.swift */,
 				50C60CB62BA53B9F00DA4B3D /* SectionBuilder.swift */,
 				50B990822BA5D7A10035BF05 /* BackupPlanTaskItemView.swift */,
+				8164C36B2E34AEE30028DA83 /* ToolbarSpacer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				50B990872BA6068A0035BF05 /* AMDManager+Apps.swift in Sources */,
 				50B9908B2BA61BE40035BF05 /* MacAddress.swift in Sources */,
 				501A477E2BA4582100C6A431 /* ResticTask.swift in Sources */,
+				8164C36C2E34AEE90028DA83 /* ToolbarSpacer.swift in Sources */,
 				502304C62B483D2B00C8314A /* MessageBoxView.swift in Sources */,
 				50B990892BA611CE0035BF05 /* DownloadSeed.swift in Sources */,
 				506A0C972B471F0F009C77A5 /* RegisterSheetView.swift in Sources */,

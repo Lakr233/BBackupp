@@ -75,10 +75,7 @@ struct DeviceView: View {
                 .disabled(true)
         }
 
-        ToolbarItem {
-            Button {} label: { Image(systemName: "circle.fill").opacity(0) }
-                .disabled(true)
-        }
+        _ToolbarSpacer()
 
         ToolbarItem {
             Button {
@@ -128,10 +125,7 @@ struct DeviceView: View {
             }
         }
 
-        ToolbarItem {
-            Button {} label: { Image(systemName: "circle.fill").opacity(0) }
-                .disabled(true)
-        }
+        _ToolbarSpacer()
 
         ToolbarItem {
             Button {

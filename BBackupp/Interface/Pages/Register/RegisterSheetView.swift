@@ -71,7 +71,7 @@ struct RegisterSheetView: View {
         .frame(width: 450, height: 300)
         .background(background.ignoresSafeArea())
         .onReceive(timer) { _ in scan() }
-        .onAppear { scan() }
+        .task { scan() } // start scan before appearing for better animation result
     }
 
     @ViewBuilder

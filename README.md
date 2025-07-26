@@ -64,6 +64,11 @@ Visit the [Releases](https://github.com/Lakr233/BBackupp/releases) on GitHub.
 
 BBackupp v2.0 is now fully open-source. You can build your own version with the included source code. Please refer to the [License](./LICENSE) for more information.
 
+To build this project, you will need:
+- Ensure you have checked out the git submodules.
+- Confirm that [`brew`](https://brew.sh) is installed.
+    > For anything else related to compile, fix them yourself. Likely, it’s your fault :P
+
 **I am unable to provide ongoing maintenance for this code due to time constraints. Therefore I made the decision to open-source it.**
 
 **It is unlikely that I will be able to provide support or update the code in the future.**

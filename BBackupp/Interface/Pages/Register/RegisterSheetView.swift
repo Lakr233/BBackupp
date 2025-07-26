@@ -80,7 +80,7 @@ struct RegisterSheetView: View {
             Color.clear
         } else {
             ColorfulView(
-                color: .constant(ColorfulPreset.jelly.colors),
+                color: .constant(ColorfulPreset.jelly.colors.map(Color.init(_:))),
                 speed: .constant(0.5)
             )
             .opacity(0.25)

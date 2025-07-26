@@ -31,6 +31,7 @@ echo "[*] libimobiledevice commit: $COMMIT_HASH"
 
 sed -i '' "s/\.define(\"PACKAGE_VERSION=.*\"/\.define(\"PACKAGE_VERSION=\\\\\"$COMMIT_HASH\\\\\"\"/" ./Package.swift
 
+brew install xcbeautify
 xcodebuild -scheme MobileBackup \
     -derivedDataPath Build \
     -configuration Release \

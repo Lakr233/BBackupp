@@ -38,7 +38,7 @@ import Foundation
 @usableFromInline
 protocol _AnyEncodable {
     var value: Any { get }
-    init<T>(_ value: T?)
+    init(_ value: (some Any)?)
 }
 
 extension AnyEncodable: _AnyEncodable {}

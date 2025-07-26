@@ -21,7 +21,7 @@ struct BackupTaskView: View {
     var footnote: String {
         let info: [Any?] = [task.id, task.pid]
         return info
-            .compactMap { $0 }
+            .compactMap(\.self)
             .compactMap { "\($0)" }
             .joined(separator: " - ")
     }

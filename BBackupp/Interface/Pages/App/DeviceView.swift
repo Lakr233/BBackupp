@@ -158,7 +158,7 @@ struct DeviceView: View {
                 DeviceValuePair(title: "Model", value: device.deviceRecord.productType)
                 DeviceValuePair(title: "System", value: [
                     device.deviceRecord.productName, device.deviceRecord.productVersion,
-                ].compactMap { $0 }.joined(separator: " "))
+                ].compactMap(\.self).joined(separator: " "))
                 DeviceValuePair(title: "IMEI 1", value: device.deviceRecord.internationalMobileEquipmentIdentity)
                 DeviceValuePair(title: "IMEI 2", value: device.deviceRecord.internationalMobileEquipmentIdentity2)
             }

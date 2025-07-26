@@ -63,13 +63,13 @@ private extension PublishedStorage {
         let defaultValue: ValueB
         var storage: UserDefaults = .standard
 
-        public init(key: String, defaultValue: ValueB, storage: UserDefaults = .standard) {
+        init(key: String, defaultValue: ValueB, storage: UserDefaults = .standard) {
             self.key = key
             self.defaultValue = defaultValue
             self.storage = storage
         }
 
-        public var wrappedValue: ValueB {
+        var wrappedValue: ValueB {
             get {
                 if let read = storage.value(forKey: key) as? Data,
                    let object = try? decoder.decode(ValueB.self, from: read)
@@ -83,7 +83,7 @@ private extension PublishedStorage {
             }
         }
 
-        public func save(value: ValueB) {
+        func save(value: ValueB) {
             do {
                 let data = try encoder.encode(value)
                 storage.setValue(data, forKey: key)

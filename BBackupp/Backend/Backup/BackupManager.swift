@@ -122,7 +122,7 @@ class BackupManager: ObservableObject {
                     Backup(deviceID: plan.deviceID, repo: plan.resticRepo, snapshot: $0)
                 }
             }
-            .flatMap { $0 }
+            .flatMap(\.self)
             .sorted { $0.snapshot.date > $1.snapshot.date }
         print("[*] reload backup for \(udid) with \(backups.count) snapshots")
         DispatchQueue.main.async {

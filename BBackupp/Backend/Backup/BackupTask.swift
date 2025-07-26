@@ -95,7 +95,7 @@ class BackupTask: ObservableObject, Identifiable {
     @Published var pid: pid_t? = nil
     @Published var recp: AuxiliaryExecute.ExecuteReceipt? = nil
 
-    private var logFile: FileHandle? = nil
+    private var logFile: FileHandle?
 
     func start(_ completion: (() -> Void)? = nil) {
         guard status == .initialized else { return }
@@ -251,7 +251,7 @@ class BackupTask: ObservableObject, Identifiable {
     }
 
     private var outputWriteBuffer = [String]()
-    private var outputWriteDedup: String? = nil
+    private var outputWriteDedup: String?
     private func writeOutput(_ output: String) {
         for char in output {
             if char == "\n" {

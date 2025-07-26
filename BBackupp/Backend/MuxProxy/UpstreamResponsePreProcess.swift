@@ -52,11 +52,11 @@ extension UpstreamResponsePreProcess {
         else { return }
 
         var injected = false
-        devManager.devices.values.forEach { device in
+        for device in devManager.devices.values {
             guard let networkAddress = device.possibleNetworkAddress.first,
                   !networkAddress.isEmpty
-            else { return }
-            if self.checkInjectIfNeeded(udid: device.udid, networkAddress: networkAddress, modifyingArray: &list) {
+            else { continue }
+            if checkInjectIfNeeded(udid: device.udid, networkAddress: networkAddress, modifyingArray: &list) {
                 injected = true
             }
         }

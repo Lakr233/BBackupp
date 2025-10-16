@@ -29,7 +29,7 @@ COMMIT_HASH=$(git -C ./libimobiledevice rev-parse HEAD)
 COMMIT_HASH=${COMMIT_HASH:0:8}
 echo "[*] libimobiledevice commit: $COMMIT_HASH"
 
-sed -i '' "s/\.define(\"PACKAGE_VERSION=.*\"/\.define(\"PACKAGE_VERSION=\\\\\"$COMMIT_HASH\\\\\"\"/" ./Package.swift
+/usr/bin/sed -i '' "s/\.define(\"PACKAGE_VERSION=.*\"/\.define(\"PACKAGE_VERSION=\\\\\"$COMMIT_HASH\\\\\"\"/" ./Package.swift
 
 brew install xcbeautify
 xcodebuild -scheme MobileBackup \

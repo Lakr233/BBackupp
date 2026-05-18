@@ -137,9 +137,10 @@ We are not liable for any consequences arising from the use of this software. Po
 - A reboot of the universe.
 - Any other imaginable scenario.
 
----
-
-Copyright © 2024 Lakr Aream. All Rights Reserved.
 ## Sponsor
 
 [LookInside](https://lookinside-app.com/) helps you inspect a running iOS or macOS app UI from your Mac.
+
+---
+
+Copyright © 2024 Lakr Aream. All Rights Reserved.

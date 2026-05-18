@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C81DCFA4702849B341BFB87 /* LookInsideServer in Frameworks */ = {isa = PBXBuildFile; productRef = 2C9A89EFDB82D19550E7070D /* LookInsideServer */; };
 		501A476E2BA40AE800C6A431 /* BackupTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A476D2BA40AE800C6A431 /* BackupTaskView.swift */; };
 		501A47702BA40CDB00C6A431 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A476F2BA40CDB00C6A431 /* TaskListView.swift */; };
 		501A47772BA448A800C6A431 /* DeviceReachableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A47762BA448A800C6A431 /* DeviceReachableLabel.swift */; };
@@ -213,6 +214,7 @@
 				506A0C8F2B470CAA009C77A5 /* ColorfulX in Frameworks */,
 				50B990A02BA623120035BF05 /* ApplePackage in Frameworks */,
 				506A0C402B46A3B1009C77A5 /* AuxiliaryExecute in Frameworks */,
+				2C81DCFA4702849B341BFB87 /* LookInsideServer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +528,7 @@
 				506A0C8E2B470CAA009C77A5 /* ColorfulX */,
 				50C60CB22BA536E000DA4B3D /* BetterCodable */,
 				50B9909F2BA623120035BF05 /* ApplePackage */,
+				2C9A89EFDB82D19550E7070D /* LookInsideServer */,
 			);
 			productName = BBackupp;
 			productReference = 506A0C152B46A117009C77A5 /* BBackupp.app */;
@@ -561,6 +564,7 @@
 				506A0C3E2B46A3B1009C77A5 /* XCRemoteSwiftPackageReference "AuxiliaryExecute" */,
 				506A0C8D2B470CAA009C77A5 /* XCRemoteSwiftPackageReference "ColorfulX" */,
 				50C60CB12BA536E000DA4B3D /* XCRemoteSwiftPackageReference "BetterCodable" */,
+				3E7E1B36F2896B71A00ADC5A /* XCRemoteSwiftPackageReference "LookInside-Release" */,
 			);
 			productRefGroup = 506A0C162B46A117009C77A5 /* Products */;
 			projectDirPath = "";
@@ -962,6 +966,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					"$(inherited)",
+					"LookInsideServer*",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BBackupp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BBackupp;
@@ -1005,6 +1013,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3E7E1B36F2896B71A00ADC5A /* XCRemoteSwiftPackageReference "LookInside-Release" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LookInsideApp/LookInside-Release.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.2;
+			};
+		};
 		506A0C272B46A1AE009C77A5 /* XCRemoteSwiftPackageReference "AppleMobileDeviceLibrary" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Lakr233/AppleMobileDeviceLibrary/";
@@ -1048,6 +1064,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2C9A89EFDB82D19550E7070D /* LookInsideServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E7E1B36F2896B71A00ADC5A /* XCRemoteSwiftPackageReference "LookInside-Release" */;
+			productName = LookInsideServer;
+		};
 		506A0C282B46A1AE009C77A5 /* AppleMobileDeviceLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 506A0C272B46A1AE009C77A5 /* XCRemoteSwiftPackageReference "AppleMobileDeviceLibrary" */;
